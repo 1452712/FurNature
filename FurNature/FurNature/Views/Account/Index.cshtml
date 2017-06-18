@@ -1,0 +1,134 @@
+﻿@{
+    ViewBag.Title = "Me";
+}
+
+<!-- 工具栏 -->
+<nav class="bar bar-tab">
+    <a class="tab-item no-transition replace" href="/Home/Index">
+        <span class="icon icon-home"></span>
+        <span class="tab-label">Home</span>
+    </a>
+    <a class="tab-item no-transition replace" href="/Models/Index">
+        <span class="icon icon-app"></span>
+        <span class="tab-label">Space</span>
+    </a>
+    <a class="tab-item no-transition replace active" href="/Account/Index">
+        <span class="icon icon-me"></span>
+        <span class="tab-label">Me</span>
+    </a>
+</nav>
+
+<div id="page-me" class="page page-me page-current page-inited">
+    <header class="bar bar-nav">
+        <h1 class="title">Me</h1>
+    </header>
+
+    <div class="content">
+        <div class="page-me">
+            <div class="list-block media-list person-card">
+                <ul>
+                    <li>
+                        <div href="#" class="item-content">
+                            <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="80"></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">Mr Potato</div>
+                                </div>
+                                <div class="item-subtitle">Time is money</div>
+                                <div class="item-text"><strong>528</strong> Follow</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="row text-center">
+                <div class="col-33">
+                    <h4>12</h4>
+                    <div class="color-gray">Rooms</div>
+                </div>
+                <div class="col-33">
+                    <h4>5</h4>
+                    <div class="color-gray">Likes</div>
+                </div>
+                <div class="col-33">
+                    <h4>25</h4>
+                    <div class="color-gray">Furnitures</div>
+                </div>
+            </div>
+            <div class="list-block list">
+                <ul>
+                    <li class="item-content item-link">
+                        <div class="item-media"><i class="icon icon-settings"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">Settings</div>
+                        </div>
+                    </li>
+                    <li class="item-content item-link">
+                        <div class="item-media"><i class="icon icon-me"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">Me</div>
+                        </div>
+                    </li>
+                    <li class="item-content item-link">
+                        <div class="item-media"><i class="icon icon-message"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">Noti</div>
+                        </div>
+                    </li>
+                    <li class="item-content item-link">
+                        <div class="item-media"><i class="icon icon-star"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">Fav</div>
+                        </div>
+                    </li>
+                    <li class="item-content item-link">
+                        <div class="item-media"><i class="icon icon-friends"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">Help</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-block">
+               <div class="button button-big button-fill button-danger external">
+                @Html.ActionLink("Logout", "LogOff")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--&lt;!&ndash; popup, panel 等放在这里 &ndash;&gt;-->
+<div class="popup popup-about">
+    <div class="content-padded">
+        <h2 class="text-center">About FurNature</h2>
+        <p class="text-center">FurNature = Furniture + Further Nature</p>
+        <p class="text-center">Interior Scene Reconstruction </p>
+        <p class="text-center">Based on Single Photo</p>
+        <p><a href="#" class="button close-popup">OK</a></p>
+    </div>
+</div>
+
+<div class="panel-overlay"></div>
+<div class="panel panel-left panel-reveal theme-dark" id="panel-themes">
+    <div class="content-block">
+        <p>Themes</p>
+        <div class="list-block">
+            <ul>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label" style="width: 60%;">Night Mode</div>
+                            <div class="item-input">
+                                <label class="label-switch">
+                                    <input type="checkbox" id="dark-switch">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

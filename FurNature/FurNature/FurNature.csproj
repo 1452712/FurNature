@@ -1,0 +1,1280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF8F4725-D076-4981-89DA-83108E03B407}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FurNature</RootNamespace>
+    <AssemblyName>FurNature</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FurnituresController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ModelsController.cs" />
+    <Compile Include="Controllers\PhotosController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Furniture.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\Photo.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\app.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\light7-build\.gitignore" />
+    <Content Include="Content\light7-build\detail.html" />
+    <Content Include="Content\light7-build\dist\css\light7-swipeout.css" />
+    <Content Include="Content\light7-build\dist\css\light7-swiper.css" />
+    <Content Include="Content\light7-build\dist\css\light7-swiper.min.css" />
+    <Content Include="Content\light7-build\dist\css\light7.css" />
+    <Content Include="Content\light7-build\dist\css\light7.min.css" />
+    <Content Include="Content\light7-build\dist\img\i-f7.png" />
+    <Content Include="Content\light7-build\dist\img\i-form-calendar.png" />
+    <Content Include="Content\light7-build\dist\img\i-form-comment.png" />
+    <Content Include="Content\light7-build\dist\img\i-form-email.png" />
+    <Content Include="Content\light7-build\dist\img\i-form-gender.png" />
+    <Content Include="Content\light7-build\dist\img\i-form-name.png" />
+    <Content Include="Content\light7-build\dist\img\i-form-password.png" />
+    <Content Include="Content\light7-build\dist\img\i-form-settings.png" />
+    <Content Include="Content\light7-build\dist\img\i-form-tel.png" />
+    <Content Include="Content\light7-build\dist\img\i-form-toggle.png" />
+    <Content Include="Content\light7-build\dist\img\i-form-url.png" />
+    <Content Include="Content\light7-build\dist\img\i-list-chevron-right.png" />
+    <Content Include="Content\light7-build\dist\img\i-sortable-handler.png" />
+    <Content Include="Content\light7-build\dist\js\i18n\cn.js" />
+    <Content Include="Content\light7-build\dist\js\i18n\cn.min.js" />
+    <Content Include="Content\light7-build\dist\js\light7-city-picker.js" />
+    <Content Include="Content\light7-build\dist\js\light7-city-picker.min.js" />
+    <Content Include="Content\light7-build\dist\js\light7-swipeout.js" />
+    <Content Include="Content\light7-build\dist\js\light7-swiper.js" />
+    <Content Include="Content\light7-build\dist\js\light7-swiper.min.js" />
+    <Content Include="Content\light7-build\dist\js\light7.js" />
+    <Content Include="Content\light7-build\dist\js\light7.min.js" />
+    <Content Include="Content\light7-build\docs\about.html" />
+    <Content Include="Content\light7-build\docs\assets\css\demos.css" />
+    <Content Include="Content\light7-build\docs\assets\css\docs.css" />
+    <Content Include="Content\light7-build\docs\assets\css\docs.min.css" />
+    <Content Include="Content\light7-build\docs\assets\css\pygments-manni.css" />
+    <Content Include="Content\light7-build\docs\assets\img\apple-touch-icon-114x114.png" />
+    <Content Include="Content\light7-build\docs\assets\img\apple-touch-icon-57x57.png" />
+    <Content Include="Content\light7-build\docs\assets\img\apple-touch-icon-72x72.png" />
+    <Content Include="Content\light7-build\docs\assets\img\demos.png" />
+    <Content Include="Content\light7-build\docs\assets\img\device-sprite.png" />
+    <Content Include="Content\light7-build\docs\assets\img\example-android.png" />
+    <Content Include="Content\light7-build\docs\assets\img\example-ios.png" />
+    <Content Include="Content\light7-build\docs\assets\img\example.png" />
+    <Content Include="Content\light7-build\docs\assets\img\i-wechat.png" />
+    <Content Include="Content\light7-build\docs\assets\img\light7-mall.png" />
+    <Content Include="Content\light7-build\docs\assets\img\slide-1.jpg" />
+    <Content Include="Content\light7-build\docs\assets\img\slide-2.jpg" />
+    <Content Include="Content\light7-build\docs\assets\img\slide-3.jpg" />
+    <Content Include="Content\light7-build\docs\assets\js\baichuan.js" />
+    <Content Include="Content\light7-build\docs\assets\js\demos.js" />
+    <Content Include="Content\light7-build\docs\assets\js\docs.js" />
+    <Content Include="Content\light7-build\docs\assets\js\docs.min.js" />
+    <Content Include="Content\light7-build\docs\assets\js\fingerblast.js" />
+    <Content Include="Content\light7-build\docs\assets\js\jquery-2.1.4.js" />
+    <Content Include="Content\light7-build\docs\assets\js\widgets.js" />
+    <Content Include="Content\light7-build\docs\assets\js\zepto.js" />
+    <Content Include="Content\light7-build\docs\baichuan-portal.html" />
+    <Content Include="Content\light7-build\docs\changelog.html" />
+    <Content Include="Content\light7-build\docs\components.html" />
+    <Content Include="Content\light7-build\docs\demos.html" />
+    <Content Include="Content\light7-build\docs\demos\actions.html" />
+    <Content Include="Content\light7-build\docs\demos\bar\bar-multi.html" />
+    <Content Include="Content\light7-build\docs\demos\bar\index.html" />
+    <Content Include="Content\light7-build\docs\demos\bar\nav-bar-labels.html" />
+    <Content Include="Content\light7-build\docs\demos\bar\nav-bar.html" />
+    <Content Include="Content\light7-build\docs\demos\bar\title-bar-btns.html" />
+    <Content Include="Content\light7-build\docs\demos\bar\title-bar-links.html" />
+    <Content Include="Content\light7-build\docs\demos\bar\title-bar.html" />
+    <Content Include="Content\light7-build\docs\demos\btns.html" />
+    <Content Include="Content\light7-build\docs\demos\calendar.html" />
+    <Content Include="Content\light7-build\docs\demos\card\facebook-card.html" />
+    <Content Include="Content\light7-build\docs\demos\card\index.html" />
+    <Content Include="Content\light7-build\docs\demos\card\list-card.html" />
+    <Content Include="Content\light7-build\docs\demos\card\simple-card.html" />
+    <Content Include="Content\light7-build\docs\demos\card\styled-card.html" />
+    <Content Include="Content\light7-build\docs\demos\card\view-card.html" />
+    <Content Include="Content\light7-build\docs\demos\city-picker.html" />
+    <Content Include="Content\light7-build\docs\demos\colors.html" />
+    <Content Include="Content\light7-build\docs\demos\datetime-picker.html" />
+    <Content Include="Content\light7-build\docs\demos\form\icon-input.html" />
+    <Content Include="Content\light7-build\docs\demos\form\index.html" />
+    <Content Include="Content\light7-build\docs\demos\form\label-input.html" />
+    <Content Include="Content\light7-build\docs\demos\form\layout.html" />
+    <Content Include="Content\light7-build\docs\demos\grid.html" />
+    <Content Include="Content\light7-build\docs\demos\icons.html" />
+    <Content Include="Content\light7-build\docs\demos\infinite-scroll.html" />
+    <Content Include="Content\light7-build\docs\demos\list\check-list.html" />
+    <Content Include="Content\light7-build\docs\demos\list\contacts-list.html" />
+    <Content Include="Content\light7-build\docs\demos\list\index.html" />
+    <Content Include="Content\light7-build\docs\demos\list\inset-list.html" />
+    <Content Include="Content\light7-build\docs\demos\list\mail-list.html" />
+    <Content Include="Content\light7-build\docs\demos\list\simple-list.html" />
+    <Content Include="Content\light7-build\docs\demos\list\songs-list.html" />
+    <Content Include="Content\light7-build\docs\demos\list\swipeout.html" />
+    <Content Include="Content\light7-build\docs\demos\list\view-list.html" />
+    <Content Include="Content\light7-build\docs\demos\modal.html" />
+    <Content Include="Content\light7-build\docs\demos\notification.html" />
+    <Content Include="Content\light7-build\docs\demos\photo-browser.html" />
+    <Content Include="Content\light7-build\docs\demos\picker.html" />
+    <Content Include="Content\light7-build\docs\demos\preloader.html" />
+    <Content Include="Content\light7-build\docs\demos\ptr-infinite-tabs.html" />
+    <Content Include="Content\light7-build\docs\demos\pull-to-refresh.html" />
+    <Content Include="Content\light7-build\docs\demos\router.html" />
+    <Content Include="Content\light7-build\docs\demos\router2.html" />
+    <Content Include="Content\light7-build\docs\demos\searchbar.html" />
+    <Content Include="Content\light7-build\docs\demos\swiper.html" />
+    <Content Include="Content\light7-build\docs\demos\tab.html" />
+    <Content Include="Content\light7-build\docs\dist\css\light7-swipeout.css" />
+    <Content Include="Content\light7-build\docs\dist\css\light7-swiper.css" />
+    <Content Include="Content\light7-build\docs\dist\css\light7-swiper.min.css" />
+    <Content Include="Content\light7-build\docs\dist\css\light7.css" />
+    <Content Include="Content\light7-build\docs\dist\css\light7.min.css" />
+    <Content Include="Content\light7-build\docs\dist\img\i-f7.png" />
+    <Content Include="Content\light7-build\docs\dist\img\i-form-calendar.png" />
+    <Content Include="Content\light7-build\docs\dist\img\i-form-comment.png" />
+    <Content Include="Content\light7-build\docs\dist\img\i-form-email.png" />
+    <Content Include="Content\light7-build\docs\dist\img\i-form-gender.png" />
+    <Content Include="Content\light7-build\docs\dist\img\i-form-name.png" />
+    <Content Include="Content\light7-build\docs\dist\img\i-form-password.png" />
+    <Content Include="Content\light7-build\docs\dist\img\i-form-settings.png" />
+    <Content Include="Content\light7-build\docs\dist\img\i-form-tel.png" />
+    <Content Include="Content\light7-build\docs\dist\img\i-form-toggle.png" />
+    <Content Include="Content\light7-build\docs\dist\img\i-form-url.png" />
+    <Content Include="Content\light7-build\docs\dist\img\i-list-chevron-right.png" />
+    <Content Include="Content\light7-build\docs\dist\img\i-sortable-handler.png" />
+    <Content Include="Content\light7-build\docs\dist\js\i18n\cn.js" />
+    <Content Include="Content\light7-build\docs\dist\js\i18n\cn.min.js" />
+    <Content Include="Content\light7-build\docs\dist\js\light7-city-picker.js" />
+    <Content Include="Content\light7-build\docs\dist\js\light7-city-picker.min.js" />
+    <Content Include="Content\light7-build\docs\dist\js\light7-swipeout.js" />
+    <Content Include="Content\light7-build\docs\dist\js\light7-swiper.js" />
+    <Content Include="Content\light7-build\docs\dist\js\light7-swiper.min.js" />
+    <Content Include="Content\light7-build\docs\dist\js\light7.js" />
+    <Content Include="Content\light7-build\docs\dist\js\light7.min.js" />
+    <Content Include="Content\light7-build\docs\docs-demos\calendar-inline.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\calendar.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\check-list.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\city-picker.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\colors.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\contacts-list.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\datetime-picker.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\i18n.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\infinite-scroll.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\js\calendar.js" />
+    <Content Include="Content\light7-build\docs\docs-demos\js\colors.js" />
+    <Content Include="Content\light7-build\docs\docs-demos\js\i18n.js" />
+    <Content Include="Content\light7-build\docs\docs-demos\js\notification.js" />
+    <Content Include="Content\light7-build\docs\docs-demos\js\picker.js" />
+    <Content Include="Content\light7-build\docs\docs-demos\js\toast.js" />
+    <Content Include="Content\light7-build\docs\docs-demos\list.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\notification.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\one.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\panels.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\photo-browser.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\picker.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\popover.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\popup.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\router.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\router2.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\structure.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\swipeout.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\swiper.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\theme-dark.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\toast.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\toolbar.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\two.html" />
+    <Content Include="Content\light7-build\docs\docs-demos\type.html" />
+    <Content Include="Content\light7-build\docs\examples.html" />
+    <Content Include="Content\light7-build\docs\examples\app-android-notes\css\app.css" />
+    <Content Include="Content\light7-build\docs\examples\app-android-notes\index.html" />
+    <Content Include="Content\light7-build\docs\examples\app-ios-mail\css\app.css" />
+    <Content Include="Content\light7-build\docs\examples\app-ios-mail\inbox.html" />
+    <Content Include="Content\light7-build\docs\examples\app-ios-mail\index.html" />
+    <Content Include="Content\light7-build\docs\examples\app-movies\choose-theater.html" />
+    <Content Include="Content\light7-build\docs\examples\app-movies\css\app.css" />
+    <Content Include="Content\light7-build\docs\examples\app-movies\img\argo.png" />
+    <Content Include="Content\light7-build\docs\examples\app-movies\img\ralph.png" />
+    <Content Include="Content\light7-build\docs\examples\app-movies\img\skyfall.png" />
+    <Content Include="Content\light7-build\docs\examples\app-movies\index.html" />
+    <Content Include="Content\light7-build\docs\examples\getting-started\index.html" />
+    <Content Include="Content\light7-build\docs\examples\light7-mall\css\app.css" />
+    <Content Include="Content\light7-build\docs\examples\light7-mall\detail.html" />
+    <Content Include="Content\light7-build\docs\examples\light7-mall\home.html" />
+    <Content Include="Content\light7-build\docs\examples\light7-mall\index.html" />
+    <Content Include="Content\light7-build\docs\examples\light7-mall\js\app.js" />
+    <Content Include="Content\light7-build\docs\extends.html" />
+    <Content Include="Content\light7-build\docs\favicon.ico" />
+    <Content Include="Content\light7-build\docs\getting-started.html" />
+    <Content Include="Content\light7-build\docs\img\home\actions.gif" />
+    <Content Include="Content\light7-build\docs\img\home\docs-ptr-demo.gif" />
+    <Content Include="Content\light7-build\docs\img\home\noti.gif" />
+    <Content Include="Content\light7-build\docs\img\home\ptr.gif" />
+    <Content Include="Content\light7-build\docs\index.html" />
+    <Content Include="Content\light7-build\docs\robots.txt" />
+    <Content Include="Content\light7-build\docs\sitemap.xml" />
+    <Content Include="Content\light7-build\docs\template.html" />
+    <Content Include="Content\light7-build\docs\_includes\ad.html" />
+    <Content Include="Content\light7-build\docs\_includes\browser-warning.html" />
+    <Content Include="Content\light7-build\docs\_includes\download-module.html" />
+    <Content Include="Content\light7-build\docs\_includes\footer.html" />
+    <Content Include="Content\light7-build\docs\_includes\ga.html" />
+    <Content Include="Content\light7-build\docs\_includes\header.html" />
+    <Content Include="Content\light7-build\docs\_includes\jump-extends.html" />
+    <Content Include="Content\light7-build\docs\_includes\jump.html" />
+    <Content Include="Content\light7-build\docs\_includes\masthead.html" />
+    <Content Include="Content\light7-build\docs\_includes\toolbar-extends.html" />
+    <Content Include="Content\light7-build\docs\_includes\toolbar.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\accordion.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\actions.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\bar.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\buttons.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\calendar.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\cards.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\city-picker.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\content.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\forms.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\grid.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\i18n.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\icons.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\infinite-scroll.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\init.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\layout.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\list.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\modal.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\notification.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\panel.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\photo-browser.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\picker.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\popup.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\pull-to-refresh.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\push.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\rem.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\router.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\scroller.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\searchbar.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\swipeout.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\swiper.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\tabs.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\themes.html" />
+    <Content Include="Content\light7-build\docs\_includes\_components\type.html" />
+    <Content Include="Content\light7-build\docs\_layouts\default.html" />
+    <Content Include="Content\light7-build\docs\_layouts\demo.html" />
+    <Content Include="Content\light7-build\docs\_layouts\docs-demos.html" />
+    <Content Include="Content\light7-build\docs\_layouts\examples.html" />
+    <Content Include="Content\light7-build\docs\_layouts\home.html" />
+    <Content Include="Content\light7-build\fonts\ratchicons.svg" />
+    <Content Include="Content\light7-build\Gruntfile.js" />
+    <Content Include="Content\light7-build\grunt\ratchicons-data-generator.js" />
+    <Content Include="Content\light7-build\img\i-f7.png" />
+    <Content Include="Content\light7-build\img\i-form-calendar.png" />
+    <Content Include="Content\light7-build\img\i-form-comment.png" />
+    <Content Include="Content\light7-build\img\i-form-email.png" />
+    <Content Include="Content\light7-build\img\i-form-gender.png" />
+    <Content Include="Content\light7-build\img\i-form-name.png" />
+    <Content Include="Content\light7-build\img\i-form-password.png" />
+    <Content Include="Content\light7-build\img\i-form-settings.png" />
+    <Content Include="Content\light7-build\img\i-form-tel.png" />
+    <Content Include="Content\light7-build\img\i-form-toggle.png" />
+    <Content Include="Content\light7-build\img\i-form-url.png" />
+    <Content Include="Content\light7-build\img\i-list-chevron-right.png" />
+    <Content Include="Content\light7-build\img\i-sortable-handler.png" />
+    <Content Include="Content\light7-build\js\accordion.js" />
+    <Content Include="Content\light7-build\js\bar-tab.js" />
+    <Content Include="Content\light7-build\js\calendar.js" />
+    <Content Include="Content\light7-build\js\city-data.js" />
+    <Content Include="Content\light7-build\js\city-picker.js" />
+    <Content Include="Content\light7-build\js\datetime-picker.js" />
+    <Content Include="Content\light7-build\js\detect.js" />
+    <Content Include="Content\light7-build\js\device.js" />
+    <Content Include="Content\light7-build\js\fastclick.js" />
+    <Content Include="Content\light7-build\js\i18n\cn.js" />
+    <Content Include="Content\light7-build\js\index.js" />
+    <Content Include="Content\light7-build\js\infinite-scroll.js" />
+    <Content Include="Content\light7-build\js\init.js" />
+    <Content Include="Content\light7-build\js\intro.js" />
+    <Content Include="Content\light7-build\js\modal.js" />
+    <Content Include="Content\light7-build\js\notification.js" />
+    <Content Include="Content\light7-build\js\page.js" />
+    <Content Include="Content\light7-build\js\panels.js" />
+    <Content Include="Content\light7-build\js\photo-browser.js" />
+    <Content Include="Content\light7-build\js\picker.js" />
+    <Content Include="Content\light7-build\js\pull-to-refresh.js" />
+    <Content Include="Content\light7-build\js\push.js" />
+    <Content Include="Content\light7-build\js\router.js" />
+    <Content Include="Content\light7-build\js\searchbar.js" />
+    <Content Include="Content\light7-build\js\sortable.js" />
+    <Content Include="Content\light7-build\js\swipeout.js" />
+    <Content Include="Content\light7-build\js\swiper-init.js" />
+    <Content Include="Content\light7-build\js\swiper.js" />
+    <Content Include="Content\light7-build\js\tabs.js" />
+    <Content Include="Content\light7-build\js\template7.js" />
+    <Content Include="Content\light7-build\js\tests\index.html" />
+    <Content Include="Content\light7-build\js\tests\unit\phantom.js" />
+    <Content Include="Content\light7-build\js\tests\unit\tabs.js" />
+    <Content Include="Content\light7-build\js\tests\vendor\jquery.min.js" />
+    <Content Include="Content\light7-build\js\tests\vendor\qunit.css" />
+    <Content Include="Content\light7-build\js\tests\vendor\qunit.js" />
+    <Content Include="Content\light7-build\js\tests\vendor\zepto.js" />
+    <Content Include="Content\light7-build\js\util.js" />
+    <Content Include="Content\light7-build\js\zepto-adapter.js" />
+    <Content Include="Content\light7-build\misc_controls_deviceorientation.html" />
+    <Content Include="Content\light7-build\try.html" />
+    <Content Include="Content\light7-build\wander.html" />
+    <Content Include="Content\light7-build\_site\about\index.html" />
+    <Content Include="Content\light7-build\_site\assets\css\demos.css" />
+    <Content Include="Content\light7-build\_site\assets\css\docs.css" />
+    <Content Include="Content\light7-build\_site\assets\css\docs.min.css" />
+    <Content Include="Content\light7-build\_site\assets\css\pygments-manni.css" />
+    <Content Include="Content\light7-build\_site\assets\img\apple-touch-icon-114x114.png" />
+    <Content Include="Content\light7-build\_site\assets\img\apple-touch-icon-57x57.png" />
+    <Content Include="Content\light7-build\_site\assets\img\apple-touch-icon-72x72.png" />
+    <Content Include="Content\light7-build\_site\assets\img\demos.png" />
+    <Content Include="Content\light7-build\_site\assets\img\device-sprite.png" />
+    <Content Include="Content\light7-build\_site\assets\img\example-android.png" />
+    <Content Include="Content\light7-build\_site\assets\img\example-ios.png" />
+    <Content Include="Content\light7-build\_site\assets\img\example.png" />
+    <Content Include="Content\light7-build\_site\assets\img\i-wechat.png" />
+    <Content Include="Content\light7-build\_site\assets\img\light7-mall.png" />
+    <Content Include="Content\light7-build\_site\assets\img\slide-1.jpg" />
+    <Content Include="Content\light7-build\_site\assets\img\slide-2.jpg" />
+    <Content Include="Content\light7-build\_site\assets\img\slide-3.jpg" />
+    <Content Include="Content\light7-build\_site\assets\js\baichuan.js" />
+    <Content Include="Content\light7-build\_site\assets\js\demos.js" />
+    <Content Include="Content\light7-build\_site\assets\js\docs.js" />
+    <Content Include="Content\light7-build\_site\assets\js\docs.min.js" />
+    <Content Include="Content\light7-build\_site\assets\js\fingerblast.js" />
+    <Content Include="Content\light7-build\_site\assets\js\jquery-2.1.4.js" />
+    <Content Include="Content\light7-build\_site\assets\js\widgets.js" />
+    <Content Include="Content\light7-build\_site\assets\js\zepto.js" />
+    <Content Include="Content\light7-build\_site\baichuan-portal\index.html" />
+    <Content Include="Content\light7-build\_site\changelog\index.html" />
+    <Content Include="Content\light7-build\_site\components\index.html" />
+    <Content Include="Content\light7-build\_site\demos\actions\index.html" />
+    <Content Include="Content\light7-build\_site\demos\bar\bar-multi\index.html" />
+    <Content Include="Content\light7-build\_site\demos\bar\index.html" />
+    <Content Include="Content\light7-build\_site\demos\bar\nav-bar-labels\index.html" />
+    <Content Include="Content\light7-build\_site\demos\bar\nav-bar\index.html" />
+    <Content Include="Content\light7-build\_site\demos\bar\title-bar-btns\index.html" />
+    <Content Include="Content\light7-build\_site\demos\bar\title-bar-links\index.html" />
+    <Content Include="Content\light7-build\_site\demos\bar\title-bar\index.html" />
+    <Content Include="Content\light7-build\_site\demos\btns\index.html" />
+    <Content Include="Content\light7-build\_site\demos\calendar\index.html" />
+    <Content Include="Content\light7-build\_site\demos\card\facebook-card\index.html" />
+    <Content Include="Content\light7-build\_site\demos\card\index.html" />
+    <Content Include="Content\light7-build\_site\demos\card\list-card\index.html" />
+    <Content Include="Content\light7-build\_site\demos\card\simple-card\index.html" />
+    <Content Include="Content\light7-build\_site\demos\card\styled-card\index.html" />
+    <Content Include="Content\light7-build\_site\demos\card\view-card\index.html" />
+    <Content Include="Content\light7-build\_site\demos\city-picker\index.html" />
+    <Content Include="Content\light7-build\_site\demos\colors\index.html" />
+    <Content Include="Content\light7-build\_site\demos\datetime-picker\index.html" />
+    <Content Include="Content\light7-build\_site\demos\form\icon-input\index.html" />
+    <Content Include="Content\light7-build\_site\demos\form\index.html" />
+    <Content Include="Content\light7-build\_site\demos\form\label-input\index.html" />
+    <Content Include="Content\light7-build\_site\demos\form\layout\index.html" />
+    <Content Include="Content\light7-build\_site\demos\grid\index.html" />
+    <Content Include="Content\light7-build\_site\demos\icons\index.html" />
+    <Content Include="Content\light7-build\_site\demos\index.html" />
+    <Content Include="Content\light7-build\_site\demos\infinite-scroll\index.html" />
+    <Content Include="Content\light7-build\_site\demos\list\check-list\index.html" />
+    <Content Include="Content\light7-build\_site\demos\list\contacts-list\index.html" />
+    <Content Include="Content\light7-build\_site\demos\list\index.html" />
+    <Content Include="Content\light7-build\_site\demos\list\inset-list\index.html" />
+    <Content Include="Content\light7-build\_site\demos\list\mail-list\index.html" />
+    <Content Include="Content\light7-build\_site\demos\list\simple-list\index.html" />
+    <Content Include="Content\light7-build\_site\demos\list\songs-list\index.html" />
+    <Content Include="Content\light7-build\_site\demos\list\swipeout\index.html" />
+    <Content Include="Content\light7-build\_site\demos\list\view-list\index.html" />
+    <Content Include="Content\light7-build\_site\demos\modal\index.html" />
+    <Content Include="Content\light7-build\_site\demos\notification\index.html" />
+    <Content Include="Content\light7-build\_site\demos\photo-browser\index.html" />
+    <Content Include="Content\light7-build\_site\demos\picker\index.html" />
+    <Content Include="Content\light7-build\_site\demos\preloader\index.html" />
+    <Content Include="Content\light7-build\_site\demos\ptr-infinite-tabs\index.html" />
+    <Content Include="Content\light7-build\_site\demos\pull-to-refresh\index.html" />
+    <Content Include="Content\light7-build\_site\demos\router2\index.html" />
+    <Content Include="Content\light7-build\_site\demos\router\index.html" />
+    <Content Include="Content\light7-build\_site\demos\searchbar\index.html" />
+    <Content Include="Content\light7-build\_site\demos\swiper\index.html" />
+    <Content Include="Content\light7-build\_site\demos\tab\index.html" />
+    <Content Include="Content\light7-build\_site\dist\css\light7-swipeout.css" />
+    <Content Include="Content\light7-build\_site\dist\css\light7-swiper.css" />
+    <Content Include="Content\light7-build\_site\dist\css\light7-swiper.min.css" />
+    <Content Include="Content\light7-build\_site\dist\css\light7.css" />
+    <Content Include="Content\light7-build\_site\dist\css\light7.min.css" />
+    <Content Include="Content\light7-build\_site\dist\img\i-f7.png" />
+    <Content Include="Content\light7-build\_site\dist\img\i-form-calendar.png" />
+    <Content Include="Content\light7-build\_site\dist\img\i-form-comment.png" />
+    <Content Include="Content\light7-build\_site\dist\img\i-form-email.png" />
+    <Content Include="Content\light7-build\_site\dist\img\i-form-gender.png" />
+    <Content Include="Content\light7-build\_site\dist\img\i-form-name.png" />
+    <Content Include="Content\light7-build\_site\dist\img\i-form-password.png" />
+    <Content Include="Content\light7-build\_site\dist\img\i-form-settings.png" />
+    <Content Include="Content\light7-build\_site\dist\img\i-form-tel.png" />
+    <Content Include="Content\light7-build\_site\dist\img\i-form-toggle.png" />
+    <Content Include="Content\light7-build\_site\dist\img\i-form-url.png" />
+    <Content Include="Content\light7-build\_site\dist\img\i-list-chevron-right.png" />
+    <Content Include="Content\light7-build\_site\dist\img\i-sortable-handler.png" />
+    <Content Include="Content\light7-build\_site\dist\js\i18n\cn.js" />
+    <Content Include="Content\light7-build\_site\dist\js\i18n\cn.min.js" />
+    <Content Include="Content\light7-build\_site\dist\js\light7-city-picker.js" />
+    <Content Include="Content\light7-build\_site\dist\js\light7-city-picker.min.js" />
+    <Content Include="Content\light7-build\_site\dist\js\light7-swipeout.js" />
+    <Content Include="Content\light7-build\_site\dist\js\light7-swiper.js" />
+    <Content Include="Content\light7-build\_site\dist\js\light7-swiper.min.js" />
+    <Content Include="Content\light7-build\_site\dist\js\light7.js" />
+    <Content Include="Content\light7-build\_site\dist\js\light7.min.js" />
+    <Content Include="Content\light7-build\_site\docs-demos\calendar-inline\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\calendar\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\check-list\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\city-picker\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\colors\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\contacts-list\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\datetime-picker\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\i18n\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\infinite-scroll\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\js\calendar.js" />
+    <Content Include="Content\light7-build\_site\docs-demos\js\colors.js" />
+    <Content Include="Content\light7-build\_site\docs-demos\js\i18n.js" />
+    <Content Include="Content\light7-build\_site\docs-demos\js\notification.js" />
+    <Content Include="Content\light7-build\_site\docs-demos\js\picker.js" />
+    <Content Include="Content\light7-build\_site\docs-demos\js\toast.js" />
+    <Content Include="Content\light7-build\_site\docs-demos\list\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\notification\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\one\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\panels\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\photo-browser\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\picker\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\popover\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\popup\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\router2\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\router\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\structure\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\swipeout\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\swiper\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\theme-dark\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\toast\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\toolbar\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\two\index.html" />
+    <Content Include="Content\light7-build\_site\docs-demos\type\index.html" />
+    <Content Include="Content\light7-build\_site\examples\app-android-notes\css\app.css" />
+    <Content Include="Content\light7-build\_site\examples\app-android-notes\index.html" />
+    <Content Include="Content\light7-build\_site\examples\app-ios-mail\css\app.css" />
+    <Content Include="Content\light7-build\_site\examples\app-ios-mail\inbox.html" />
+    <Content Include="Content\light7-build\_site\examples\app-ios-mail\index.html" />
+    <Content Include="Content\light7-build\_site\examples\app-movies\choose-theater.html" />
+    <Content Include="Content\light7-build\_site\examples\app-movies\css\app.css" />
+    <Content Include="Content\light7-build\_site\examples\app-movies\img\argo.png" />
+    <Content Include="Content\light7-build\_site\examples\app-movies\img\ralph.png" />
+    <Content Include="Content\light7-build\_site\examples\app-movies\img\skyfall.png" />
+    <Content Include="Content\light7-build\_site\examples\app-movies\index.html" />
+    <Content Include="Content\light7-build\_site\examples\getting-started\index.html" />
+    <Content Include="Content\light7-build\_site\examples\index.html" />
+    <Content Include="Content\light7-build\_site\examples\light7-mall\css\app.css" />
+    <Content Include="Content\light7-build\_site\examples\light7-mall\detail\index.html" />
+    <Content Include="Content\light7-build\_site\examples\light7-mall\home\index.html" />
+    <Content Include="Content\light7-build\_site\examples\light7-mall\index.html" />
+    <Content Include="Content\light7-build\_site\examples\light7-mall\js\app.js" />
+    <Content Include="Content\light7-build\_site\extends\index.html" />
+    <Content Include="Content\light7-build\_site\favicon.ico" />
+    <Content Include="Content\light7-build\_site\getting-started\index.html" />
+    <Content Include="Content\light7-build\_site\img\home\actions.gif" />
+    <Content Include="Content\light7-build\_site\img\home\docs-ptr-demo.gif" />
+    <Content Include="Content\light7-build\_site\img\home\noti.gif" />
+    <Content Include="Content\light7-build\_site\img\home\ptr.gif" />
+    <Content Include="Content\light7-build\_site\index.html" />
+    <Content Include="Content\light7-build\_site\robots.txt" />
+    <Content Include="Content\light7-build\_site\sitemap.xml" />
+    <Content Include="Content\light7-build\_site\template.html" />
+    <Content Include="Content\light7-swipeout.css" />
+    <Content Include="Content\light7-swiper.css" />
+    <Content Include="Content\light7-swiper.min.css" />
+    <Content Include="Content\light7.css" />
+    <Content Include="Content\light7.min.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="demos.png" />
+    <Content Include="device-sprite.png" />
+    <Content Include="example-android.png" />
+    <Content Include="example-ios.png" />
+    <Content Include="example.png" />
+    <Content Include="faces.PNG" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Image\demos.png" />
+    <Content Include="Image\device-sprite.png" />
+    <Content Include="Image\example-android.png" />
+    <Content Include="Image\example-ios.png" />
+    <Content Include="Image\example.png" />
+    <Content Include="Image\faces.PNG" />
+    <Content Include="Image\favicon.ico" />
+    <Content Include="Image\hback.jpg" />
+    <Content Include="Image\hbottom.jpg" />
+    <Content Include="Image\hleft.jpg" />
+    <Content Include="Image\house.jpg" />
+    <Content Include="Image\hright.jpg" />
+    <Content Include="Image\hsides\01\hback.jpg" />
+    <Content Include="Image\hsides\01\hbottom.jpg" />
+    <Content Include="Image\hsides\01\hleft.jpg" />
+    <Content Include="Image\hsides\01\house.jpg" />
+    <Content Include="Image\hsides\01\hright.jpg" />
+    <Content Include="Image\hsides\01\htop.jpg" />
+    <Content Include="Image\hsides\02\hback.jpg" />
+    <Content Include="Image\hsides\02\hbottom.jpg" />
+    <Content Include="Image\hsides\02\hleft.jpg" />
+    <Content Include="Image\hsides\02\house.jpg" />
+    <Content Include="Image\hsides\02\hright.jpg" />
+    <Content Include="Image\hsides\02\htop.jpg" />
+    <Content Include="Image\hsides\03\hback.jpg" />
+    <Content Include="Image\hsides\03\hbottom.jpg" />
+    <Content Include="Image\hsides\03\hleft.jpg" />
+    <Content Include="Image\hsides\03\house.jpg" />
+    <Content Include="Image\hsides\03\hright.jpg" />
+    <Content Include="Image\hsides\03\htop.jpg" />
+    <Content Include="Image\hsides\04\hback.jpg" />
+    <Content Include="Image\hsides\04\hbottom.jpg" />
+    <Content Include="Image\hsides\04\hleft.jpg" />
+    <Content Include="Image\hsides\04\house.jpg" />
+    <Content Include="Image\hsides\04\hright.jpg" />
+    <Content Include="Image\hsides\04\htop.jpg" />
+    <Content Include="Image\hsides\05\hback.jpg" />
+    <Content Include="Image\hsides\05\hbottom.jpg" />
+    <Content Include="Image\hsides\05\hleft.jpg" />
+    <Content Include="Image\hsides\05\house.jpg" />
+    <Content Include="Image\hsides\05\hright.jpg" />
+    <Content Include="Image\hsides\05\htop.jpg" />
+    <Content Include="Image\hsides\06\hback.jpg" />
+    <Content Include="Image\hsides\06\hbottom.jpg" />
+    <Content Include="Image\hsides\06\hleft.jpg" />
+    <Content Include="Image\hsides\06\house.jpg" />
+    <Content Include="Image\hsides\06\hright.jpg" />
+    <Content Include="Image\hsides\06\htop.jpg" />
+    <Content Include="Image\hsides\07\hback.jpg" />
+    <Content Include="Image\hsides\07\hbottom.jpg" />
+    <Content Include="Image\hsides\07\hleft.jpg" />
+    <Content Include="Image\hsides\07\house.jpg" />
+    <Content Include="Image\hsides\07\hright.jpg" />
+    <Content Include="Image\hsides\07\htop.jpg" />
+    <Content Include="Image\hsides\08\hback.jpg" />
+    <Content Include="Image\hsides\08\hbottom.jpg" />
+    <Content Include="Image\hsides\08\hleft.jpg" />
+    <Content Include="Image\hsides\08\house.jpg" />
+    <Content Include="Image\hsides\08\hright.jpg" />
+    <Content Include="Image\hsides\08\htop.jpg" />
+    <Content Include="Image\hsides\09\hback.jpg" />
+    <Content Include="Image\hsides\09\hbottom.jpg" />
+    <Content Include="Image\hsides\09\hleft.jpg" />
+    <Content Include="Image\hsides\09\hright.jpg" />
+    <Content Include="Image\hsides\09\htop.jpg" />
+    <Content Include="Image\hsides\10\hback.jpg" />
+    <Content Include="Image\hsides\10\hbottom.jpg" />
+    <Content Include="Image\hsides\10\hleft.jpg" />
+    <Content Include="Image\hsides\10\house.jpg" />
+    <Content Include="Image\hsides\10\hright.jpg" />
+    <Content Include="Image\hsides\10\htop.jpg" />
+    <Content Include="Image\hsides\11\hback.jpg" />
+    <Content Include="Image\hsides\11\hbottom.jpg" />
+    <Content Include="Image\hsides\11\hleft.jpg" />
+    <Content Include="Image\hsides\11\house.jpg" />
+    <Content Include="Image\hsides\11\hright.jpg" />
+    <Content Include="Image\hsides\11\htop.jpg" />
+    <Content Include="Image\htop.jpg" />
+    <Content Include="Image\i-wechat.png" />
+    <Content Include="Image\light7-mall.png" />
+    <Content Include="Image\logo.PNG" />
+    <Content Include="Image\slide-1.jpg" />
+    <Content Include="Image\slide-2.jpg" />
+    <Content Include="Image\slide-3.jpg" />
+    <Content Include="Scripts\ai.0.22.9-build00167.js" />
+    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Scripts\AnimationClipCreator.js" />
+    <Content Include="Scripts\animation\CCDIKSolver.js" />
+    <Content Include="Scripts\animation\MMDPhysics.js" />
+    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\BlendCharacter.js" />
+    <Content Include="Scripts\BlendCharacterGui.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Image\hsides.zip" />
+    <Content Include="Content\light7-build\.jshintignore" />
+    <Content Include="Content\light7-build\.npmignore" />
+    <Content Include="Content\light7-build\bower.json" />
+    <Content Include="Content\light7-build\CNAME" />
+    <Content Include="Content\light7-build\CONTRIBUTING.md" />
+    <Content Include="Content\light7-build\develop.md" />
+    <Content Include="Content\light7-build\docs\LICENSE" />
+    <Content Include="Content\light7-build\docs\_data\ratchicons.yml" />
+    <Content Include="Content\light7-build\fonts\ratchicons.eot" />
+    <Content Include="Content\light7-build\fonts\ratchicons.ttf" />
+    <Content Include="Content\light7-build\fonts\ratchicons.woff" />
+    <Content Include="Content\light7-build\js\.jscsrc" />
+    <Content Include="Content\light7-build\js\.jshintrc" />
+    <Content Include="Content\light7-build\js\tests\unit\.jshintrc" />
+    <Content Include="Content\light7-build\less\.csscomb.json" />
+    <Content Include="Content\light7-build\less\.csslintrc" />
+    <Content Include="Content\light7-build\less\accordion.less" />
+    <Content Include="Content\light7-build\less\badges.less" />
+    <Content Include="Content\light7-build\less\bars.less" />
+    <Content Include="Content\light7-build\less\base.less" />
+    <Content Include="Content\light7-build\less\buttons.less" />
+    <Content Include="Content\light7-build\less\calendar.less" />
+    <Content Include="Content\light7-build\less\calendar.zip" />
+    <Content Include="Content\light7-build\less\cards.less" />
+    <Content Include="Content\light7-build\less\colors.less" />
+    <Content Include="Content\light7-build\less\content-block.less" />
+    <Content Include="Content\light7-build\less\demos.less" />
+    <Content Include="Content\light7-build\less\docs-baichuan.less" />
+    <Content Include="Content\light7-build\less\docs.less" />
+    <Content Include="Content\light7-build\less\fonts.less" />
+    <Content Include="Content\light7-build\less\forms.less" />
+    <Content Include="Content\light7-build\less\grid.less" />
+    <Content Include="Content\light7-build\less\icons.less" />
+    <Content Include="Content\light7-build\less\index.less" />
+    <Content Include="Content\light7-build\less\infinite.less" />
+    <Content Include="Content\light7-build\less\light7-swiper.less" />
+    <Content Include="Content\light7-build\less\light7.less" />
+    <Content Include="Content\light7-build\less\lists.less" />
+    <Content Include="Content\light7-build\less\mixins.less" />
+    <Content Include="Content\light7-build\less\modal.less" />
+    <Content Include="Content\light7-build\less\normalize.less" />
+    <Content Include="Content\light7-build\less\notification.less" />
+    <Content Include="Content\light7-build\less\pages.less" />
+    <Content Include="Content\light7-build\less\panels.less" />
+    <Content Include="Content\light7-build\less\photo-browser.less" />
+    <Content Include="Content\light7-build\less\picker.less" />
+    <Content Include="Content\light7-build\less\preloader.less" />
+    <Content Include="Content\light7-build\less\pull-to-refresh.less" />
+    <Content Include="Content\light7-build\less\push.less" />
+    <Content Include="Content\light7-build\less\rem.less" />
+    <Content Include="Content\light7-build\less\scroller.less" />
+    <Content Include="Content\light7-build\less\searchbar.less" />
+    <Content Include="Content\light7-build\less\swipeout.less" />
+    <Content Include="Content\light7-build\less\swiper.less" />
+    <Content Include="Content\light7-build\less\tabs.less" />
+    <Content Include="Content\light7-build\less\themes.less" />
+    <Content Include="Content\light7-build\less\type.less" />
+    <Content Include="Content\light7-build\less\variables.less" />
+    <Content Include="Content\light7-build\LICENSE" />
+    <Content Include="Content\light7-build\package.json" />
+    <Content Include="Content\light7-build\README-CN.md" />
+    <Content Include="Content\light7-build\README.md" />
+    <Content Include="Content\light7-build\_config.yml" />
+    <Content Include="Content\light7-build\_site\LICENSE" />
+    <Content Include="ClassDiagram1.cd" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\BufferGeometryUtils.js" />
+    <Content Include="Scripts\cameras\CinematicCamera.js" />
+    <Content Include="Scripts\cameras\CombinedCamera.js" />
+    <Content Include="Scripts\Car.js" />
+    <Content Include="Scripts\cat.touchjs.js" />
+    <Content Include="Scripts\Cloth.js" />
+    <Content Include="Scripts\controls\DeviceOrientationControls.js" />
+    <Content Include="Scripts\controls\DragControls.js" />
+    <Content Include="Scripts\controls\EditorControls.js" />
+    <Content Include="Scripts\controls\FirstPersonControls.js" />
+    <Content Include="Scripts\controls\FlyControls.js" />
+    <Content Include="Scripts\controls\MouseControls.js" />
+    <Content Include="Scripts\controls\OrbitControls.js" />
+    <Content Include="Scripts\controls\OrthographicTrackballControls.js" />
+    <Content Include="Scripts\controls\PointerLockControls.js" />
+    <Content Include="Scripts\controls\TrackballControls.js" />
+    <Content Include="Scripts\controls\TransformControls.js" />
+    <Content Include="Scripts\controls\VRControls.js" />
+    <Content Include="Scripts\crossfade\gui.js" />
+    <Content Include="Scripts\crossfade\scenes.js" />
+    <Content Include="Scripts\crossfade\transition.js" />
+    <Content Include="Scripts\CurveExtras.js" />
+    <Content Include="Scripts\curves\NURBSCurve.js" />
+    <Content Include="Scripts\curves\NURBSSurface.js" />
+    <Content Include="Scripts\curves\NURBSUtils.js" />
+    <Content Include="Scripts\demos.js" />
+    <Content Include="Scripts\Detector.js" />
+    <Content Include="Scripts\effects\AnaglyphEffect.js" />
+    <Content Include="Scripts\effects\AsciiEffect.js" />
+    <Content Include="Scripts\effects\ParallaxBarrierEffect.js" />
+    <Content Include="Scripts\effects\PeppersGhostEffect.js" />
+    <Content Include="Scripts\effects\StereoEffect.js" />
+    <Content Include="Scripts\effects\VREffect.js" />
+    <Content Include="Scripts\Encodings.js" />
+    <Content Include="Scripts\exporters\OBJExporter.js" />
+    <Content Include="Scripts\exporters\STLBinaryExporter.js" />
+    <Content Include="Scripts\exporters\STLExporter.js" />
+    <Content Include="Scripts\exporters\TypedGeometryExporter.js" />
+    <Content Include="Scripts\geometries\ConvexGeometry.js" />
+    <Content Include="Scripts\geometries\DecalGeometry.js" />
+    <Content Include="Scripts\geometries\hilbert2D.js" />
+    <Content Include="Scripts\geometries\hilbert3D.js" />
+    <Content Include="Scripts\geometries\TeapotBufferGeometry.js" />
+    <Content Include="Scripts\GPUComputationRenderer.js" />
+    <Content Include="Scripts\GPUParticleSystem.js" />
+    <Content Include="Scripts\Gyroscope.js" />
+    <Content Include="Scripts\Half.js" />
+    <Content Include="Scripts\ImprovedNoise.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery.ZResize.js" />
+    <Content Include="Scripts\libs\ammo.js" />
+    <Content Include="Scripts\libs\charsetencoder.min.js" />
+    <Content Include="Scripts\libs\dat.gui.min.js" />
+    <Content Include="Scripts\libs\earcut.js" />
+    <Content Include="Scripts\libs\inflate.min.js" />
+    <Content Include="Scripts\libs\jszip.min.js" />
+    <Content Include="Scripts\libs\msgpack-js.js" />
+    <Content Include="Scripts\libs\pnltri.min.js" />
+    <Content Include="Scripts\libs\stats.min.js" />
+    <Content Include="Scripts\libs\system.min.js" />
+    <Content Include="Scripts\libs\timeliner_gui.min.js" />
+    <Content Include="Scripts\libs\tween.min.js" />
+    <Content Include="Scripts\libs\zlib_and_gzip.min.js" />
+    <Content Include="Scripts\light7-city-picker.js" />
+    <Content Include="Scripts\light7-city-picker.min.js" />
+    <Content Include="Scripts\light7-swipeout.js" />
+    <Content Include="Scripts\light7-swiper.js" />
+    <Content Include="Scripts\light7-swiper.min.js" />
+    <Content Include="Scripts\light7.js" />
+    <Content Include="Scripts\light7.min.js" />
+    <Content Include="Scripts\loaders\3MFLoader.js" />
+    <Content Include="Scripts\loaders\AMFLoader.js" />
+    <Content Include="Scripts\loaders\AssimpJSONLoader.js" />
+    <Content Include="Scripts\loaders\AWDLoader.js" />
+    <Content Include="Scripts\loaders\BabylonLoader.js" />
+    <Content Include="Scripts\loaders\BinaryLoader.js" />
+    <Content Include="Scripts\loaders\BVHLoader.js" />
+    <Content Include="Scripts\loaders\ColladaLoader.js" />
+    <Content Include="Scripts\loaders\ColladaLoader2.js" />
+    <Content Include="Scripts\loaders\collada\Animation.js" />
+    <Content Include="Scripts\loaders\collada\AnimationHandler.js" />
+    <Content Include="Scripts\loaders\collada\KeyFrameAnimation.js" />
+    <Content Include="Scripts\loaders\ctm\ctm.js" />
+    <Content Include="Scripts\loaders\ctm\CTMLoader.js" />
+    <Content Include="Scripts\loaders\ctm\CTMWorker.js" />
+    <Content Include="Scripts\loaders\ctm\license\js-lzma.txt" />
+    <Content Include="Scripts\loaders\ctm\license\js-openctm.txt" />
+    <Content Include="Scripts\loaders\ctm\license\OpenCTM.txt" />
+    <Content Include="Scripts\loaders\ctm\lzma.js" />
+    <Content Include="Scripts\loaders\DDSLoader.js" />
+    <Content Include="Scripts\loaders\deprecated\SceneLoader.js" />
+    <Content Include="Scripts\loaders\FBXLoader.js" />
+    <Content Include="Scripts\loaders\GLTFLoader.js" />
+    <Content Include="Scripts\loaders\gltf\glTF-parser.js" />
+    <Content Include="Scripts\loaders\gltf\glTFAnimation.js" />
+    <Content Include="Scripts\loaders\gltf\glTFLoader.js" />
+    <Content Include="Scripts\loaders\gltf\glTFLoaderUtils.js" />
+    <Content Include="Scripts\loaders\gltf\glTFShaders.js" />
+    <Content Include="Scripts\loaders\gltf\gltfUtilities.js" />
+    <Content Include="Scripts\loaders\HDRCubeTextureLoader.js" />
+    <Content Include="Scripts\loaders\KMZLoader.js" />
+    <Content Include="Scripts\loaders\MD2Loader.js" />
+    <Content Include="Scripts\loaders\MMDLoader.js" />
+    <Content Include="Scripts\loaders\MTLLoader.js" />
+    <Content Include="Scripts\loaders\NRRDLoader.js" />
+    <Content Include="Scripts\loaders\OBJLoader.js" />
+    <Content Include="Scripts\loaders\PCDLoader.js" />
+    <Content Include="Scripts\loaders\PDBLoader.js" />
+    <Content Include="Scripts\loaders\PlayCanvasLoader.js" />
+    <Content Include="Scripts\loaders\PLYLoader.js" />
+    <Content Include="Scripts\loaders\PVRLoader.js" />
+    <Content Include="Scripts\loaders\RGBELoader.js" />
+    <Content Include="Scripts\loaders\sea3d\SEA3D.js" />
+    <Content Include="Scripts\loaders\sea3d\SEA3DDeflate.js" />
+    <Content Include="Scripts\loaders\sea3d\SEA3DLegacy.js" />
+    <Content Include="Scripts\loaders\sea3d\SEA3DLoader.js" />
+    <Content Include="Scripts\loaders\sea3d\SEA3DLZMA.js" />
+    <Content Include="Scripts\loaders\STLLoader.js" />
+    <Content Include="Scripts\loaders\SVGLoader.js" />
+    <Content Include="Scripts\loaders\TGALoader.js" />
+    <Content Include="Scripts\loaders\UTF8Loader.js" />
+    <Content Include="Scripts\loaders\VRMLLoader.js" />
+    <Content Include="Scripts\loaders\VTKLoader.js" />
+    <Content Include="Scripts\MarchingCubes.js" />
+    <Content Include="Scripts\math\ColorConverter.js" />
+    <Content Include="Scripts\math\Lut.js" />
+    <Content Include="Scripts\MD2Character.js" />
+    <Content Include="Scripts\MD2CharacterComplex.js" />
+    <Content Include="Scripts\Mirror.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\modifiers\BufferSubdivisionModifier.js" />
+    <Content Include="Scripts\modifiers\ExplodeModifier.js" />
+    <Content Include="Scripts\modifiers\SimplifyModifier.js" />
+    <Content Include="Scripts\modifiers\SubdivisionModifier.js" />
+    <Content Include="Scripts\modifiers\TessellateModifier.js" />
+    <Content Include="Scripts\MorphAnimation.js" />
+    <Content Include="Scripts\MorphAnimMesh.js" />
+    <Content Include="Scripts\nodes\accessors\CameraNode.js" />
+    <Content Include="Scripts\nodes\accessors\ColorsNode.js" />
+    <Content Include="Scripts\nodes\accessors\LightNode.js" />
+    <Content Include="Scripts\nodes\accessors\NormalNode.js" />
+    <Content Include="Scripts\nodes\accessors\PositionNode.js" />
+    <Content Include="Scripts\nodes\accessors\ReflectNode.js" />
+    <Content Include="Scripts\nodes\accessors\ScreenUVNode.js" />
+    <Content Include="Scripts\nodes\accessors\UVNode.js" />
+    <Content Include="Scripts\nodes\BuilderNode.js" />
+    <Content Include="Scripts\nodes\ConstNode.js" />
+    <Content Include="Scripts\nodes\FunctionCallNode.js" />
+    <Content Include="Scripts\nodes\FunctionNode.js" />
+    <Content Include="Scripts\nodes\GLNode.js" />
+    <Content Include="Scripts\nodes\InputNode.js" />
+    <Content Include="Scripts\nodes\inputs\ColorNode.js" />
+    <Content Include="Scripts\nodes\inputs\CubeTextureNode.js" />
+    <Content Include="Scripts\nodes\inputs\FloatNode.js" />
+    <Content Include="Scripts\nodes\inputs\IntNode.js" />
+    <Content Include="Scripts\nodes\inputs\Matrix4Node.js" />
+    <Content Include="Scripts\nodes\inputs\MirrorNode.js" />
+    <Content Include="Scripts\nodes\inputs\ScreenNode.js" />
+    <Content Include="Scripts\nodes\inputs\TextureNode.js" />
+    <Content Include="Scripts\nodes\inputs\Vector2Node.js" />
+    <Content Include="Scripts\nodes\inputs\Vector3Node.js" />
+    <Content Include="Scripts\nodes\inputs\Vector4Node.js" />
+    <Content Include="Scripts\nodes\materials\PhongNode.js" />
+    <Content Include="Scripts\nodes\materials\PhongNodeMaterial.js" />
+    <Content Include="Scripts\nodes\materials\StandardNode.js" />
+    <Content Include="Scripts\nodes\materials\StandardNodeMaterial.js" />
+    <Content Include="Scripts\nodes\math\Math1Node.js" />
+    <Content Include="Scripts\nodes\math\Math2Node.js" />
+    <Content Include="Scripts\nodes\math\Math3Node.js" />
+    <Content Include="Scripts\nodes\math\OperatorNode.js" />
+    <Content Include="Scripts\nodes\NodeLib.js" />
+    <Content Include="Scripts\nodes\NodeMaterial.js" />
+    <Content Include="Scripts\nodes\postprocessing\NodePass.js" />
+    <Content Include="Scripts\nodes\RawNode.js" />
+    <Content Include="Scripts\nodes\TempNode.js" />
+    <Content Include="Scripts\nodes\utils\ColorAdjustmentNode.js" />
+    <Content Include="Scripts\nodes\utils\JoinNode.js" />
+    <Content Include="Scripts\nodes\utils\LuminanceNode.js" />
+    <Content Include="Scripts\nodes\utils\NoiseNode.js" />
+    <Content Include="Scripts\nodes\utils\NormalMapNode.js" />
+    <Content Include="Scripts\nodes\utils\ResolutionNode.js" />
+    <Content Include="Scripts\nodes\utils\RoughnessToBlinnExponentNode.js" />
+    <Content Include="Scripts\nodes\utils\SwitchNode.js" />
+    <Content Include="Scripts\nodes\utils\TimerNode.js" />
+    <Content Include="Scripts\nodes\utils\VelocityNode.js" />
+    <Content Include="Scripts\objects\ShadowMesh.js" />
+    <Content Include="Scripts\Ocean.js" />
+    <Content Include="Scripts\Octree.js" />
+    <Content Include="Scripts\ParametricGeometries.js" />
+    <Content Include="Scripts\pmrem\PMREMCubeUVPacker.js" />
+    <Content Include="Scripts\pmrem\PMREMGenerator.js" />
+    <Content Include="Scripts\postprocessing\AdaptiveToneMappingPass.js" />
+    <Content Include="Scripts\postprocessing\BloomPass.js" />
+    <Content Include="Scripts\postprocessing\BokehPass.js" />
+    <Content Include="Scripts\postprocessing\ClearPass.js" />
+    <Content Include="Scripts\postprocessing\CubeTexturePass.js" />
+    <Content Include="Scripts\postprocessing\DotScreenPass.js" />
+    <Content Include="Scripts\postprocessing\EffectComposer.js" />
+    <Content Include="Scripts\postprocessing\FilmPass.js" />
+    <Content Include="Scripts\postprocessing\GlitchPass.js" />
+    <Content Include="Scripts\postprocessing\ManualMSAARenderPass.js" />
+    <Content Include="Scripts\postprocessing\MaskPass.js" />
+    <Content Include="Scripts\postprocessing\RenderPass.js" />
+    <Content Include="Scripts\postprocessing\SavePass.js" />
+    <Content Include="Scripts\postprocessing\ShaderPass.js" />
+    <Content Include="Scripts\postprocessing\SMAAPass.js" />
+    <Content Include="Scripts\postprocessing\TAARenderPass.js" />
+    <Content Include="Scripts\postprocessing\TexturePass.js" />
+    <Content Include="Scripts\PRNG.js" />
+    <Content Include="Scripts\renderers\CanvasRenderer.js" />
+    <Content Include="Scripts\renderers\CSS2DRenderer.js" />
+    <Content Include="Scripts\renderers\CSS3DRenderer.js" />
+    <Content Include="Scripts\renderers\Projector.js" />
+    <Content Include="Scripts\renderers\RaytracingRenderer.js" />
+    <Content Include="Scripts\renderers\RaytracingWorker.js" />
+    <Content Include="Scripts\renderers\SoftwareRenderer.js" />
+    <Content Include="Scripts\renderers\SVGRenderer.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\RollerCoaster.js" />
+    <Content Include="Scripts\ShaderGodRays.js" />
+    <Content Include="Scripts\ShaderSkin.js" />
+    <Content Include="Scripts\shaders\BasicShader.js" />
+    <Content Include="Scripts\shaders\BleachBypassShader.js" />
+    <Content Include="Scripts\shaders\BlendShader.js" />
+    <Content Include="Scripts\shaders\BokehShader.js" />
+    <Content Include="Scripts\shaders\BokehShader2.js" />
+    <Content Include="Scripts\shaders\BrightnessContrastShader.js" />
+    <Content Include="Scripts\shaders\ColorCorrectionShader.js" />
+    <Content Include="Scripts\shaders\ColorifyShader.js" />
+    <Content Include="Scripts\shaders\ConvolutionShader.js" />
+    <Content Include="Scripts\shaders\CopyShader.js" />
+    <Content Include="Scripts\shaders\DigitalGlitch.js" />
+    <Content Include="Scripts\shaders\DOFMipMapShader.js" />
+    <Content Include="Scripts\shaders\DotScreenShader.js" />
+    <Content Include="Scripts\shaders\EdgeShader.js" />
+    <Content Include="Scripts\shaders\EdgeShader2.js" />
+    <Content Include="Scripts\shaders\FilmShader.js" />
+    <Content Include="Scripts\shaders\FocusShader.js" />
+    <Content Include="Scripts\shaders\FresnelShader.js" />
+    <Content Include="Scripts\shaders\FXAAShader.js" />
+    <Content Include="Scripts\shaders\GammaCorrectionShader.js" />
+    <Content Include="Scripts\shaders\HorizontalBlurShader.js" />
+    <Content Include="Scripts\shaders\HorizontalTiltShiftShader.js" />
+    <Content Include="Scripts\shaders\HueSaturationShader.js" />
+    <Content Include="Scripts\shaders\KaleidoShader.js" />
+    <Content Include="Scripts\shaders\LuminosityShader.js" />
+    <Content Include="Scripts\shaders\MirrorShader.js" />
+    <Content Include="Scripts\shaders\NormalMapShader.js" />
+    <Content Include="Scripts\shaders\OceanShaders.js" />
+    <Content Include="Scripts\shaders\ParallaxShader.js" />
+    <Content Include="Scripts\shaders\RGBShiftShader.js" />
+    <Content Include="Scripts\shaders\SepiaShader.js" />
+    <Content Include="Scripts\shaders\SMAAShader.js" />
+    <Content Include="Scripts\shaders\SSAOShader.js" />
+    <Content Include="Scripts\shaders\TechnicolorShader.js" />
+    <Content Include="Scripts\shaders\ToneMapShader.js" />
+    <Content Include="Scripts\shaders\TriangleBlurShader.js" />
+    <Content Include="Scripts\shaders\UnpackDepthRGBAShader.js" />
+    <Content Include="Scripts\shaders\VerticalBlurShader.js" />
+    <Content Include="Scripts\shaders\VerticalTiltShiftShader.js" />
+    <Content Include="Scripts\shaders\VignetteShader.js" />
+    <Content Include="Scripts\ShaderTerrain.js" />
+    <Content Include="Scripts\ShaderToon.js" />
+    <Content Include="Scripts\SimplexNoise.js" />
+    <Content Include="Scripts\SkyShader.js" />
+    <Content Include="Scripts\three.js" />
+    <Content Include="Scripts\three.min.js" />
+    <Content Include="Scripts\TimelinerController.js" />
+    <Content Include="Scripts\touch.min.js" />
+    <Content Include="Scripts\TypedArrayUtils.js" />
+    <Content Include="Scripts\UCSCharacter.js" />
+    <Content Include="Scripts\utils\GeometryUtils.js" />
+    <Content Include="Scripts\utils\ImageUtils.js" />
+    <Content Include="Scripts\utils\ShadowMapViewer.js" />
+    <Content Include="Scripts\utils\UVsDebug.js" />
+    <Content Include="Scripts\ViveController.js" />
+    <Content Include="Scripts\Volume.js" />
+    <Content Include="Scripts\VolumeSlice.js" />
+    <Content Include="Scripts\WaterShader.js" />
+    <Content Include="Scripts\WebVR.js" />
+    <Content Include="Scripts\whir.touch.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Furnitures\Create.cshtml" />
+    <Content Include="Views\Furnitures\Delete.cshtml" />
+    <Content Include="Views\Furnitures\Details.cshtml" />
+    <Content Include="Views\Furnitures\Edit.cshtml" />
+    <Content Include="Views\Furnitures\Index.cshtml" />
+    <Content Include="Views\Models\Create.cshtml" />
+    <Content Include="Views\Models\Delete.cshtml" />
+    <Content Include="Views\Models\Details.cshtml" />
+    <Content Include="Views\Models\Edit.cshtml" />
+    <Content Include="Views\Models\Index.cshtml" />
+    <Content Include="Views\Photos\Create.cshtml" />
+    <Content Include="Views\Photos\Delete.cshtml" />
+    <Content Include="Views\Photos\Details.cshtml" />
+    <Content Include="Views\Photos\Edit.cshtml" />
+    <Content Include="Views\Photos\Index.cshtml" />
+    <Content Include="Scripts\libs\zlib_and_gzip.min.js.map" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Photos\CreatePhoto.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2494</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2494/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

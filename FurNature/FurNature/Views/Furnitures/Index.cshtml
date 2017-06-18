@@ -1,0 +1,229 @@
+﻿@model IEnumerable<FurNature.Models.Furniture>
+
+@{
+    ViewBag.Title = "My Space";
+}
+
+@*<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.path)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.path)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>*@
+
+<!-- 工具栏 -->
+<nav class="bar bar-tab">
+    <a class="tab-item no-transition replace" href="/Home/Index">
+        <span class="icon icon-home"></span>
+        <span class="tab-label">Home</span>
+    </a>
+    <a class="tab-item no-transition replace active" href="/Furnitures/Index">
+        <span class="icon icon-app"></span>
+        <span class="tab-label">Space</span>
+    </a>
+    <a class="tab-item no-transition replace" href="/Account/Index">
+        <span class="icon icon-me"></span>
+        <span class="tab-label">Me</span>
+    </a>
+</nav>
+
+<div id="page-space" class="page page-space page-current page-inited">
+    <header class="bar bar-nav">
+        <h1 class="title">My Space</h1>
+    </header>
+    <div class="content pull-to-refresh-content infinite-scroll">
+        <style>
+            .card-header {
+                height: 10rem;
+                overflow: hidden;
+            }
+        </style>
+        <div class="pull-to-refresh-layer">
+            <div class="preloader"></div>
+            <div class="pull-to-refresh-arrow"></div>
+        </div>
+        <div class="list">
+            <div class="card color-default">
+                <div style="" valign="bottom" class="card-header color-white no-border no-padding">
+                    <img class="card-cover" src="~/Image/hsides/01/house.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <div class="row no-gutter">
+                        <div class="col-55">
+                            <div class="card-content-inner">
+                                <p>DreamHome Square</p>
+                                <p class="color-gray">@DateTime.Now.Year</p>
+                            </div>
+                        </div>
+                        <div class="col-45">
+                            <div class="content-padded">
+                                <p><a class="button button-big button-fill external" href="room1.html" data-transition="fade">Enter Room</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="link">Like(120)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card color-default">
+                <div style="" valign="bottom" class="card-header color-white no-border no-padding">
+                    <img class="card-cover" src="~/Image/hsides/02/house.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <div class="row no-gutter">
+                        <div class="col-55">
+                            <div class="card-content-inner">
+                                <p>DreamHome Square</p>
+                                <p class="color-gray">@DateTime.Now.Year</p>
+                            </div>
+                        </div>
+                        <div class="col-45">
+                            <div class="content-padded">
+                                <p><a class="button button-big button-fill external" href="room2.html" data-transition="fade">Enter Room</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="link">Like(120)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card color-default">
+                <div style="" valign="bottom" class="card-header color-white no-border no-padding">
+                    <img class="card-cover" src="~/Image/hsides/03/house.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <div class="row no-gutter">
+                        <div class="col-55">
+                            <div class="card-content-inner">
+                                <p>DreamHome Square</p>
+                                <p class="color-gray">@DateTime.Now.Year</p>
+                            </div>
+                        </div>
+                        <div class="col-45">
+                            <div class="content-padded">
+                                <p><a class="button button-big button-fill external" href="room3.html" data-transition="fade">Enter Room</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="link">Like(120)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card color-default">
+                <div style="" valign="bottom" class="card-header color-white no-border no-padding">
+                    <img class="card-cover" src="~/Image/hsides/05/house.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <div class="row no-gutter">
+                        <div class="col-55">
+                            <div class="card-content-inner">
+                                <p>DreamHome Square</p>
+                                <p class="color-gray">@DateTime.Now.Year</p>
+                            </div>
+                        </div>
+                        <div class="col-45">
+                            <div class="content-padded">
+                                <p><a class="button button-big button-fill external" href="room5.html" data-transition="fade">Enter Room</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="link">Like(120)</span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="infinite-scroll-preloader">
+            <div class="preloader"></div>
+        </div>
+        <div style="display:none" id="index-tpl">
+            <a href="detail.html">
+                <div class="card color-default">
+                    <div style="" valign="bottom" class="card-header color-white no-border no-padding">
+                        <img class="card-cover" src="//gd4.alicdn.com/bao/uploaded/i4/TB13mgfHpXXXXcVXFXXXXXXXXXX_!!2-item_pic.png_640x640.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-content-inner">
+                            <p>My Pillow Classic Series Bed Pillows</p>
+                            <p class="color-gray">@DateTime.Now.Year</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="link">like(20)</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--&lt;!&ndash; popup, panel 等放在这里 &ndash;&gt;-->
+<div class="popup popup-about">
+    <div class="content-padded">
+        <h2 class="text-center">About FurNature</h2>
+        <p class="text-center">FurNature = Furniture + Further Nature</p>
+        <p class="text-center">Interior Scene Reconstruction </p>
+        <p class="text-center">Based on Single Photo</p>
+        <p><a href="#" class="button close-popup">OK</a></p>
+    </div>
+</div>
+
+<div class="panel-overlay"></div>
+<div class="panel panel-left panel-reveal theme-dark" id="panel-themes">
+    <div class="content-block">
+        <p>Themes</p>
+        <div class="list-block">
+            <ul>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label" style="width: 60%;">Night Mode</div>
+                            <div class="item-input">
+                                <label class="label-switch">
+                                    <input type="checkbox" id="dark-switch">
+                                    <div class="checkbox"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
