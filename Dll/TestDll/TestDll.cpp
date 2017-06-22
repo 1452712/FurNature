@@ -41,7 +41,7 @@ MyPoint VanishingPoint(vector<CvPoint*> &lines);
 // bool divide_lines(MyPoint pt1, MyPoint pt2, CvPoint *line);
 bool ifinline(MyPoint pt, CvPoint *line);
 bool dividephoto(string path);
-extern "C" __declspec(dllexport) bool handleImage(int x1, int y1, int x2, int y2, string user_id, string pic_id);
+extern "C" __declspec(dllexport) bool __stdcall handleImage(int x1, int y1, int x2, int y2, string user_id, string pic_id);
 
 void on_mouse(int event, int x, int y, int flags, void* ustc);
 vector<CvPoint> conorpoints1;
@@ -104,15 +104,15 @@ void on_mouse(int event, int x, int y, int flags, void* ustc)
 	}
 }
 
-bool handleImage(int x1, int y1, int x2, int y2, string user_id, string pic_id)
+bool __stdcall handleImage(int x1, int y1, int x2, int y2, string user_id, string pic_id)
 {
 	CvPoint pt1 = cvPoint(x1, y1);
 	CvPoint pt2 = cvPoint(x2, y2);
 	conorpoints.push_back(pt1);
 	conorpoints.push_back(pt2);
 
-	string path = "img\\" + user_id + "\\" + pic_id + "\\";
-	string pfilename = path + "home.jpg";
+	string path = "\\Image\\hsides\\" + user_id + "\\" + pic_id + "\\";
+	string pfilename = path + "house.jpg";
 
 	const char *filename = pfilename.c_str();
 	IplImage* src0 = cvLoadImage(filename);
@@ -454,20 +454,28 @@ bool dividephoto(string path)
 	CvPoint2D32f points5_2[4];
 
 	//back
-	CvPoint2D32f cpt1_1(conors[0].x, conors[0].y);
-	CvPoint2D32f cpt2_1(conors[1].x, conors[1].y);
-	CvPoint2D32f cpt3_1(conors[2].x, conors[2].y);
-	CvPoint2D32f cpt4_1(conors[3].x, conors[3].y);
+	CvPoint2D32f cpt1_1;
+	cpt1_1.x = conors[0].x;
+	cpt1_1.y = conors[0].y;
+	CvPoint2D32f cpt2_1;
+	cpt2_1.x = conors[1].x;
+	cpt2_1.y = conors[1].y;
+	CvPoint2D32f cpt3_1;
+	cpt3_1.x = conors[2].x;
+	cpt3_1.y = conors[2].y;
+	CvPoint2D32f cpt4_1;
+	cpt4_1.x = conors[3].x;
+	cpt4_1.y = conors[3].y;
 
 	points1_1[0] = cpt1_1;
 	points1_1[1] = cpt2_1;
 	points1_1[2] = cpt3_1;
 	points1_1[3] = cpt4_1;
 
-	CvPoint2D32f cpt1(0, 0);
-	CvPoint2D32f cpt2(width, 0);
-	CvPoint2D32f cpt3(width, height);
-	CvPoint2D32f cpt4(0, height);
+	CvPoint2D32f cpt1; cpt1.x = 0; cpt1.y = 0;
+	CvPoint2D32f cpt2; cpt2.x = width; cpt2.y = 0;
+	CvPoint2D32f cpt3; cpt3.x = width; cpt3.y = height;
+	CvPoint2D32f cpt4; cpt4.x = 0; cpt4.y = height;
 
 	points1_2[0] = cpt1;
 	points1_2[1] = cpt2;
@@ -505,10 +513,10 @@ bool dividephoto(string path)
 	if (d4 > d3)d34 = d4;
 
 	//left
-	CvPoint2D32f cpt5_1(conors[4].x, conors[4].y);
-	CvPoint2D32f cpt6_1(conors[0].x, conors[0].y);
-	CvPoint2D32f cpt7_1(conors[3].x, conors[3].y);
-	CvPoint2D32f cpt8_1(conors[7].x, conors[7].y);
+	CvPoint2D32f cpt5_1; cpt5_1.x = conors[4].x; cpt5_1.y = conors[4].y;
+	CvPoint2D32f cpt6_1; cpt6_1.x = conors[0].x; cpt6_1.y = conors[0].y;
+	CvPoint2D32f cpt7_1; cpt7_1.x = conors[3].x; cpt7_1.y = conors[3].y;
+	CvPoint2D32f cpt8_1; cpt8_1.x = conors[7].x; cpt8_1.y = conors[7].y;
 
 	points2_1[0] = cpt5_1;
 	points2_1[1] = cpt6_1;
@@ -516,10 +524,10 @@ bool dividephoto(string path)
 	points2_1[3] = cpt8_1;
 
 
-	CvPoint2D32f cpt5(d12 - d1, 0);
-	CvPoint2D32f cpt6(d12, 0);
-	CvPoint2D32f cpt7(d12, height);
-	CvPoint2D32f cpt8(d12 - d2, height);
+	CvPoint2D32f cpt5; cpt5.x = d12 - d1; cpt5.y = 0;
+	CvPoint2D32f cpt6; cpt6.x = d12; cpt6.y = 0;
+	CvPoint2D32f cpt7; cpt7.x = d12; cpt7.y = height;
+	CvPoint2D32f cpt8; cpt8.x = d12 - d2; cpt8.y = height;
 
 	points2_2[0] = cpt5;
 	points2_2[1] = cpt6;
@@ -544,20 +552,28 @@ bool dividephoto(string path)
 	cvSaveImage(hleft.c_str(), pDest2);
 
 	//top
-	CvPoint2D32f cpt9_1(conors[4].x, conors[4].y);
-	CvPoint2D32f cpt10_1(conors[5].x, conors[5].y);
-	CvPoint2D32f cpt11_1(conors[1].x, conors[1].y);
-	CvPoint2D32f cpt12_1(conors[0].x, conors[0].y);
+	CvPoint2D32f cpt9_1;
+	cpt9_1.x = conors[4].x;
+	cpt9_1.y = conors[4].y;
+	CvPoint2D32f cpt10_1;
+	cpt10_1.x = conors[5].x;
+	cpt10_1.y = conors[5].y;
+	CvPoint2D32f cpt11_1;
+	cpt11_1.x = conors[1].x;
+	cpt11_1.y = conors[1].y;
+	CvPoint2D32f cpt12_1;
+	cpt12_1.x = conors[0].x;
+	cpt12_1.y = conors[0].y;
 
 	points3_1[0] = cpt9_1;
 	points3_1[1] = cpt10_1;
 	points3_1[2] = cpt11_1;
 	points3_1[3] = cpt12_1;
 
-	CvPoint2D32f cpt9(0, d13 - d1);
-	CvPoint2D32f cpt10(width, d13 - d3);
-	CvPoint2D32f cpt11(width, d13);
-	CvPoint2D32f cpt12(0, d13);
+	CvPoint2D32f cpt9; cpt9.x = 0;cpt9.y = d13 - d1;
+	CvPoint2D32f cpt10; cpt10.x = width; cpt10.y = d13 - d3;
+	CvPoint2D32f cpt11; cpt11.x = width; cpt11.y = d13;
+	CvPoint2D32f cpt12; cpt12.x = 0;cpt12.y = d13;
 
 	points3_2[0] = cpt9;
 	points3_2[1] = cpt10;
@@ -582,20 +598,28 @@ bool dividephoto(string path)
 	cvSaveImage(htop.c_str(), pDest3);
 
 	//right
-	CvPoint2D32f cpt13_1(conors[1].x, conors[1].y);
-	CvPoint2D32f cpt14_1(conors[5].x, conors[5].y);
-	CvPoint2D32f cpt15_1(conors[6].x, conors[6].y);
-	CvPoint2D32f cpt16_1(conors[2].x, conors[2].y);
+	CvPoint2D32f cpt13_1;
+	cpt13_1.x = conors[1].x;
+	cpt13_1.y = conors[1].y;
+	CvPoint2D32f cpt14_1;
+	cpt14_1.x = conors[5].x;
+	cpt14_1.y = conors[5].y;
+	CvPoint2D32f cpt15_1;
+	cpt15_1.x = conors[6].x;
+	cpt15_1.y = conors[6].y;
+	CvPoint2D32f cpt16_1;
+	cpt16_1.x = conors[2].x;
+	cpt16_1.y = conors[2].y;
 
 	points4_1[0] = cpt13_1;
 	points4_1[1] = cpt14_1;
 	points4_1[2] = cpt15_1;
 	points4_1[3] = cpt16_1;
 
-	CvPoint2D32f cpt13(0, 0);
-	CvPoint2D32f cpt14(d3, 0);
-	CvPoint2D32f cpt15(d4, height);
-	CvPoint2D32f cpt16(0, height);
+	CvPoint2D32f cpt13; cpt13.x = 0; cpt13.y = 0;
+	CvPoint2D32f cpt14; cpt14.x = d3; cpt14.y = 0;
+	CvPoint2D32f cpt15; cpt15.x = d4; cpt15.y = height;
+	CvPoint2D32f cpt16; cpt16.x = 0; cpt16.y = height;
 
 	points4_2[0] = cpt13;
 	points4_2[1] = cpt14;
@@ -620,20 +644,28 @@ bool dividephoto(string path)
 	cvSaveImage(hright.c_str(), pDest4);
 
 	//bottom
-	CvPoint2D32f cpt17_1(conors[3].x, conors[3].y);
-	CvPoint2D32f cpt18_1(conors[2].x, conors[2].y);
-	CvPoint2D32f cpt19_1(conors[6].x, conors[6].y);
-	CvPoint2D32f cpt20_1(conors[7].x, conors[7].y);
+	CvPoint2D32f cpt17_1;
+	cpt17_1.x = conors[3].x;
+	cpt17_1.y = conors[3].y;
+	CvPoint2D32f cpt18_1;
+	cpt18_1.x = conors[2].x;
+	cpt18_1.y = conors[2].y;
+	CvPoint2D32f cpt19_1;
+	cpt19_1.x = conors[6].x;
+	cpt19_1.y = conors[6].y;
+	CvPoint2D32f cpt20_1;
+	cpt20_1.x = conors[7].x;
+	cpt20_1.y = conors[7].y;
 
 	points5_1[0] = cpt17_1;
 	points5_1[1] = cpt18_1;
 	points5_1[2] = cpt19_1;
 	points5_1[3] = cpt20_1;
 
-	CvPoint2D32f cpt17(0, 0);
-	CvPoint2D32f cpt18(width, 0);
-	CvPoint2D32f cpt19(width, d4);
-	CvPoint2D32f cpt20(0, d2);
+	CvPoint2D32f cpt17; cpt17.x = 0; cpt17.y = 0;
+	CvPoint2D32f cpt18; cpt18.x = width; cpt18.y = 0;
+	CvPoint2D32f cpt19; cpt19.x = width; cpt19.y = d4;
+	CvPoint2D32f cpt20; cpt20.x = 0; cpt20.y = d2;
 
 	points5_2[0] = cpt17;
 	points5_2[1] = cpt18;

@@ -30,7 +30,7 @@
 
     #onDevice {
         position: absolute;
-        bottom: 15px;
+        bottom: 10px;
         left: 30%;
         z-index: 2;
         padding: 8px 12px;
@@ -42,16 +42,31 @@
         -webkit-appearance: none;
     }
 
-    .button_1 {
-        background-color: #2A75B7;
-        padding-bottom: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 5px;
-        width: auto;
-        right: 10px;
+    #addFur {
+        position: absolute;
+        bottom: 50px;
+        left: 34%;
+        z-index: 2;
+        padding: 8px 12px;
+        font-size: 15px;
+        color: #fff;
+        background: #0894ec;
+        border: none;
+        cursor: pointer;
+        -webkit-appearance: none;
     }
+
+    /*.black_overlay {*/
+    /*display: none;*/
+    /*position:absolute;*/
+    /*top:0%; left:0%; width:100%; height: 100%;*/
+    /*background-color:black;*/
+    /*z-index:3;-moz-opacity: 0.5;opacity: 50;*/
+    /*filter:alpha(opacity=50);*/
+    /*}*/
 </style>
+
+
 
 <header class="bar bar-nav">
     <a class="button button-link button-nav pull-left back" href='/Models/Index'>
@@ -59,12 +74,167 @@
         Back
     </a>
     <h1 class="title">Room</h1>
+    <a class="button button-link button-nav pull-right" href='home.html#page-space'>
+        save
+    </a>
 </header>
 
+<div class="content-block" id="list" style="display: none; width:100%; height: 100%; z-index: 10;background-color: #e8e8e8">
+    <div class="bar bar-header-secondary">
+        <div class="searchbar">
+            <a class="searchbar-cancel">Cancel</a>
+            <div class="search-input">
+                <label class="icon icon-search" for="search"></label>
+                <input type="search" id='search' placeholder='input name of furniture...' />
+            </div>
+        </div>
+    </div>
+    <div class="content pull-to-refresh-content infinite-scroll">
+        <style>
+            .card-header {
+                height: 10rem;
+                overflow: hidden;
+            }
+        </style>
+        <div class="pull-to-refresh-layer">
+            <div class="preloader"></div>
+            <div class="pull-to-refresh-arrow"></div>
+        </div>
+        <div class="list">
+            <div class="row no-gutter">
+                <div class="col-50">
+                    <div class="card color-default">
+                        <div style="max-height: 100px" class="card-header color-white no-border no-padding">
+                            <img class="card-cover" src="img/fur1.jpeg" alt="">
+                        </div>
+                        <div class="card-content">
+                            <div class="content-padded">
+                                <p>Brown sofa</p>
+                            </div>
+                            <div class="card-content-inner">
+                                <p><a href="#" class="button" onclick="addOBJ('1')">Add to room</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-50">
+                    <div class="card color-default">
+                        <div style="max-height: 100px" class="card-header color-white no-border no-padding">
+                            <img class="card-cover" src="img/fur2.jpeg" alt="">
+                        </div>
+                        <div class="card-content">
+                            <div class="content-padded">
+                                <p>Europian sofa</p>
+                            </div>
+                            <div class="card-content-inner">
+                                <p><a href="#" class="button" onclick="addOBJ('1')">Add to room</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutter">
+                <div class="col-50">
+                    <div class="card color-default">
+                        <div style="max-height: 100px" class="card-header color-white no-border no-padding">
+                            <img class="card-cover" src="img/fur1.jpeg" alt="">
+                        </div>
+                        <div class="card-content">
+                            <div class="content-padded">
+                                <p>Brown sofa</p>
+                            </div>
+                            <div class="card-content-inner">
+                                <p><a href="#" class="button" onclick="addOBJ('1')">Add to room</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-50">
+                    <div class="card color-default">
+                        <div style="max-height: 100px" class="card-header color-white no-border no-padding">
+                            <img class="card-cover" src="img/fur2.jpeg" alt="">
+                        </div>
+                        <div class="card-content">
+                            <div class="content-padded">
+                                <p>Europian sofa</p>
+                            </div>
+                            <div class="card-content-inner">
+                                <p><a href="#" class="button" onclick="addOBJ('1')">Add to room</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutter">
+                <div class="col-50">
+                    <div class="card color-default">
+                        <div style="max-height: 100px" class="card-header color-white no-border no-padding">
+                            <img class="card-cover" src="img/fur1.jpeg" alt="">
+                        </div>
+                        <div class="card-content">
+                            <div class="content-padded">
+                                <p>Brown sofa</p>
+                            </div>
+                            <div class="card-content-inner">
+                                <p><a href="#" class="button" onclick="addOBJ('1')">Add to room</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-50">
+                    <div class="card color-default">
+                        <div style="max-height: 100px" class="card-header color-white no-border no-padding">
+                            <img class="card-cover" src="img/fur2.jpeg" alt="">
+                        </div>
+                        <div class="card-content">
+                            <div class="content-padded">
+                                <p>Europian sofa</p>
+                            </div>
+                            <div class="card-content-inner">
+                                <p><a href="#" class="button" onclick="addOBJ('1')">Add to room</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="infinite-scroll-preloader">
+            <div class="preloader"></div>
+        </div>
+        <div style="display:none" id="index-tpl">
+            <a href="detail.html">
+                <div class="card color-default">
+                    <div style="" valign="bottom" class="card-header color-white no-border no-padding">
+                        <img class="card-cover" src="//gd4.alicdn.com/bao/uploaded/i4/TB13mgfHpXXXXcVXFXXXXXXXXXX_!!2-item_pic.png_640x640.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-content-inner">
+                            <p>My Pillow Classic Series Bed Pillows</p>
+                            <p class="color-gray">@DateTime.Now.Year</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="link">like(20)</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
 
 <div id="container">
 </div>
+<input id="addFur" type="button" value="Add Furniture" onclick="showlist()">
 <input id="onDevice" type="button" value="Begin Virtual Tour">
+
+<script>
+    function showlist(){
+
+        document.getElementById("list").style.display='block';
+        document.getElementById("addFur").style.display='none';
+        document.getElementById("onDevice").style.display='none';
+    }
+</script>
 
 
 
@@ -74,8 +244,33 @@
 <script src="~/Scripts/controls/DeviceOrientationControls.js"></script>
 <script src="~/Scripts/Detector.js"></script>
 <script src="~/Scripts/libs/stats.min.js"></script>
+<script src="~/Scripts/loaders/OBJLoader.js"></script>
+<script src="~/Scripts/loaders/MTLLoader.js"></script>
+<script src="~/Scripts/loaders/FBXLoader.js"></script>
+<script src="~/Scripts/loaders/ColladaLoader.js"></script>
 <script>
-    //console.log(@Model.ID);
+
+    function setCookie(name,value)
+    {
+        var Days = 365;
+        var exp  = new Date();
+        exp.setTime(exp.getTime() + Days*24*60*60*1000);
+        document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+    }
+
+    function getCookie(name)
+    {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=document.cookie.match(reg))
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+
+    var path = "img/" + getCookie("num") + "g/";
+    var path = "/Image/hsides/01/";
+
+
     var camera, device, scene, renderer;
     var target = new THREE.Vector3();
 
@@ -100,7 +295,9 @@
     var controls;
     var textureLoader;
 
-    var mwidth, mheight;
+    var mwidth,mheight;
+
+    var furniture;
 
 
     init();
@@ -200,12 +397,12 @@
         var pos = new THREE.Vector3();
         var quat = new THREE.Quaternion();
 
-        var width, height;
+        var width,height;
 
 
         //wall3
         var hback = document.createElement('img');
-        hback.src = "@Model.ImgBack";
+        hback.src = path+'hback.jpg';
         hback.onload = function() {
             mheight=hback.height;
             mwidth=hback.width;
@@ -214,7 +411,7 @@
             var wall3 = createParalellepiped( 1, mheight, mwidth, 0, pos, quat, new THREE.MeshPhongMaterial( { color: 0xFFFFFF } ) );
             wall3.castShadow = true;
             wall3.receiveShadow = true;
-            textureLoader.load( "@Model.ImgBack", function (texture) {
+            textureLoader.load( path+"hback.jpg", function( texture ) {
                 wall3.material.map = texture;
                 wall3.material.needsUpdate = true;
             } );
@@ -223,7 +420,7 @@
 
         // Ground
         var hbottom = document.createElement('img');
-        hbottom.src =  "@Model.ImgBottom";
+        hbottom.src = path+'hbottom.jpg';
         hbottom.onload = function() {
             height=hbottom.height;
             width=hbottom.width;
@@ -232,7 +429,7 @@
             var ground = createParalellepiped( width, 1, height, 0, pos, quat, new THREE.MeshPhongMaterial( { color: 0xFFFFFF } ) );
             ground.castShadow = true;
             ground.receiveShadow = true;
-            textureLoader.load("@Model.ImgBottom", function (texture) {
+            textureLoader.load( path+"hbottom.jpg", function( texture ) {
                 ground.material.map = texture;
                 ground.material.needsUpdate = true;
             } );
@@ -241,7 +438,7 @@
 
         // top
         var htop = document.createElement('img');
-        htop.src = "@Model.ImgTop";
+        htop.src = path+'htop.jpg';
         htop.onload = function() {
             height=htop.height;
             width=htop.width;
@@ -250,7 +447,7 @@
             var top = createParalellepiped( width, 1, height, 0, pos, quat, new THREE.MeshPhongMaterial( { color: 0xFFFFFF } ) );
             top.castShadow = true;
             top.receiveShadow = true;
-            textureLoader.load("@Model.ImgTop", function (texture) {
+            textureLoader.load( path+"htop.jpg", function( texture ) {
                 top.material.map = texture;
                 top.material.needsUpdate = true;
             } );
@@ -259,7 +456,7 @@
 
         //wall1
         var hleft = document.createElement('img');
-        hleft.src = "@Model.ImgLeft";
+        hleft.src = path+'hleft.jpg';
         hleft.onload = function() {
             height=hleft.height;
             width=hleft.width;
@@ -268,7 +465,7 @@
             var wall1 = createParalellepiped( width, height, 1, 0, pos, quat, new THREE.MeshPhongMaterial( { color: 0xFFFFFF } ) );
             wall1.castShadow = true;
             wall1.receiveShadow = true;
-            textureLoader.load("@Model.ImgLeft", function (texture) {
+            textureLoader.load( path+"hleft.jpg", function( texture ) {
                 wall1.material.map = texture;
                 wall1.material.needsUpdate = true;
             } );
@@ -277,7 +474,7 @@
 
         //wall2
         var hright = document.createElement('img');
-        hright.src = "@Model.ImgRight";
+        hright.src = path+'hleft.jpg';
         hright.onload = function() {
             height=hright.height;
             width=hright.width;
@@ -286,7 +483,7 @@
             var wall2 = createParalellepiped( width, height, 1, 0, pos, quat, new THREE.MeshPhongMaterial( { color: 0xFFFFFF } ) );
             wall2.castShadow = true;
             wall2.receiveShadow = true;
-            textureLoader.load("@Model.ImgRight", function (texture) {
+            textureLoader.load( path+"hright.jpg", function( texture ) {
                 wall2.material.map = texture;
                 wall2.material.needsUpdate = true;
             } );
@@ -435,21 +632,32 @@
 
     }
 
-    function addOBJ(){
+    function addOBJ(id){
 
-        var pos = new THREE.Vector3();
-        var quat = new THREE.Quaternion();
+        var onProgress = function ( xhr ) {
+            if ( xhr.lengthComputable ) {
+                var percentComplete = xhr.loaded / xhr.total * 100;
+                console.log( Math.round(percentComplete, 2) + '% downloaded' );
+            }
+        };
 
-        pos.set( 200, -mheight/2+10,  -50 );
-        quat.setFromAxisAngle( new THREE.Vector3( 0, 0, 0 ), 180 * Math.PI / 180 );
+        var onError = function ( xhr ) {
+        };
 
-        var box = createParalellepiped( 20, 20, 20, 0, pos, quat, new THREE.MeshPhongMaterial( { color: 0xFFFFFF } ) );
-        box.castShadow = true;
-        box.receiveShadow = true;
-        textureLoader.load("@Model.ImgBack", function (texture) {
-            box.material.map = texture;
-            box.material.needsUpdate = true;
-        } );
+        var loader = new THREE.ColladaLoader();
+        var path="/Image/models/0"+id+"/file.dae"
+        loader.load(path, function( collada ){
+            rouletteScene = collada.scene;
+            rouletteScene.scale.set(0.15,0.15,0.15);
+            rouletteScene.position.set(200, -mheight/2,  mwidth/2-50 );
+            rouletteScene.rotation.set(0, 180 * Math.PI / 180, 0  );
+            scene.add(rouletteScene);
+        }, onProgress, onError );
+
+
+        document.getElementById("list").style.display='none';
+        document.getElementById("addFur").style.display='block';
+        document.getElementById("onDevice").style.display='block';
 
     }
 

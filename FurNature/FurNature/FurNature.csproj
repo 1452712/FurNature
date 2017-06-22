@@ -793,6 +793,14 @@
     <Content Include="Image\i-wechat.png" />
     <Content Include="Image\light7-mall.png" />
     <Content Include="Image\logo.PNG" />
+    <Content Include="Image\models\01\3d66com2015-120-12-981.jpg" />
+    <Content Include="Image\models\01\3d66com2015-120-13-981.jpg" />
+    <Content Include="Image\models\01\3d66com2015-120-14-981.jpg" />
+    <Content Include="Image\models\01\3d66com2015-120-15-981.jpg" />
+    <Content Include="Image\models\01\3d66com2015-120-16-981.jpg" />
+    <Content Include="Image\models\01\3d66com2015-120-17-981.jpg" />
+    <Content Include="Image\models\01\3d66com2015-120-33-981.jpg" />
+    <Content Include="Image\models\01\3d66com2015-120-34-981.jpg" />
     <Content Include="Image\slide-1.jpg" />
     <Content Include="Image\slide-2.jpg" />
     <Content Include="Image\slide-3.jpg" />
@@ -876,6 +884,7 @@
     <Content Include="Content\light7-build\_config.yml" />
     <Content Include="Content\light7-build\_site\LICENSE" />
     <Content Include="ClassDiagram1.cd" />
+    <Content Include="Image\models\01\file.dae" />
     <None Include="Properties\PublishProfiles\FurNatureConfig.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\BufferGeometryUtils.js" />
