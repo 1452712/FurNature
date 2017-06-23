@@ -1,0 +1,111 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@*<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>*@
+
+<!-- 工具栏 -->
+<nav class="bar bar-tab">
+    <a class="tab-item no-transition replace active" href="/Home/Index">
+        <span class="icon icon-home"></span>
+        <span class="tab-label">Home</span>
+    </a>
+    <a class="tab-item no-transition replace" href="/Models/Index">
+        <span class="icon icon-app"></span>
+        <span class="tab-label">Space</span>
+    </a>
+    <a class="tab-item no-transition replace" href="/Account/Index">
+        <span class="icon icon-me"></span>
+        <span class="tab-label">Me</span>
+    </a>
+</nav>
+
+<div class="page page-home page-current page-inited" id="page-home">
+    <header class="bar bar-nav">
+        <a class="icon icon-settings pull-left open-panel"></a>
+        <a class="icon icon-cart pull-right external" href="/Furnitures/Index"></a>
+        <h1 class="title">FurNature</h1>
+    </header>
+    <div class="content">
+        <div class="page-home">
+            <div class="content-block">
+                <div class="row text-center">
+                    <img src="~/Image/faces.PNG">
+                    <h3 class="text-center">please take an indoor picture containing 5 faces like this</h3>
+                    <form>
+                        <label class="cameraButton">
+                            Take a picture
+                            <input type="file" accept="image/*;capture=camera">
+                        </label>
+                        <a href="/Photos/CreatePhoto?email=nbwjh@126.com" class="button button-big button-fill external" data-transition="fade">
+                            <input type="button" value="Mark Corners" id="submit">
+                            @*@Html.ActionLink("Mark Corners", "CreatePhoto", "Photos" , new { email = "1452712@gmail.com" })*@
+                            </a>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--&lt;!&ndash; popup, panel 等放在这里 &ndash;&gt;-->
+    <div class="popup popup-about">
+        <div class="content-padded">
+            <h2 class="text-center">About FurNature</h2>
+            <p class="text-center">FurNature = Furniture + Further Nature</p>
+            <p class="text-center">Interior Scene Reconstruction </p>
+            <p class="text-center">Based on Single Photo</p>
+            <p><a href="#" class="button close-popup">OK</a></p>
+        </div>
+    </div>
+
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-reveal theme-dark" id="panel-themes">
+        <div class="content-block">
+            <p>Themes</p>
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label" style="width: 60%;">Night Mode</div>
+                                <div class="item-input">
+                                    <label class="label-switch">
+                                        <input type="checkbox" id="dark-switch">
+                                        <div class="checkbox"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>

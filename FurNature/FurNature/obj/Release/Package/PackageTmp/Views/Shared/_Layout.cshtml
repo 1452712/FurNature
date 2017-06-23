@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FurNature - @ViewBag.Title</title>
+    <link rel="shortcut icon" href="~/Image/logo.PNG">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="apple-touch-icon-precomposed" href="~/Image/logo.PNG">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="yes" name="apple-touch-fullscreen">
+
+    @Styles.Render("~/Content/css")
+        <link rel="stylesheet" href="//at.alicdn.com/t/font_1433748561_0232708.css">
+        <style id="__web-inspector-hide-shortcut-style__" type="text/css">
+            .__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after {
+                visibility: hidden !important;
+            }
+        </style>
+
+    @*@Scripts.Render("~/bundles/modernizr")*@
+
+</head>
+
+<body>                    
+   @RenderBody()
+
+                        @*<div class="navbar navbar-inverse navbar-fixed-top">
+                                <div class="container">
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                        @Html.ActionLink("应用程序名称", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                                    </div>
+                                    <div class="navbar-collapse collapse">
+                                        <ul class="nav navbar-nav">
+                                            <li>@Html.ActionLink("主页", "Index", "Home")</li>
+                                            <li>@Html.ActionLink("关于", "About", "Home")</li>
+                                            <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
+                                        </ul>
+                                        @Html.Partial("_LoginPartial")
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container body-content">
+                                @RenderBody()
+                                <hr />
+                                <footer>
+                                    <p>&copy; @DateTime.Now.Year - FurNature</p>
+                                </footer>
+                            </div>
+
+                            @Scripts.Render("~/bundles/jquery")
+                            @Scripts.Render("~/bundles/bootstrap")
+                            @RenderSection("scripts", required: false)*@
+        <script type="text/javascript" src="//g.alicdn.com/sj/lib/zepto/zepto.js" charset="utf-8"></script>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/light7")
+        @Scripts.Render("~/Scripts/app.js")
+        @Scripts.Render("~/Scripts/libs/ammo.js")
+        @Scripts.Render("~/Scripts/controls/OrbitControls.js")
+        @Scripts.Render("~/Scripts/controls/DeviceOrientationControls.js")
+        @Scripts.Render("~/Scripts/Detector.js")
+        @Scripts.Render("~/Scripts/libs/stats.min.js")
+        @Scripts.Render("~/Scripts/app.js")
+        @RenderSection("scripts", required: false)
+</body>
+</html>

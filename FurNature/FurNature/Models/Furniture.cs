@@ -11,8 +11,8 @@ namespace FurNature.Models
         public string Type { get; set; }
         public string Path { get; set; }
         public string Img { get; set; }
-        public float Price { get; set; }
-        public string Purchase_url { get; set; }
+        public decimal Price { get; set; }
+        public string PurchaseUrl { get; set; }
         public string Introduction { get; set; }
         
         //public class FurnitureDBContext : DbContext

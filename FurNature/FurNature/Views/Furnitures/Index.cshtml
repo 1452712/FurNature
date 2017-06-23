@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<FurNature.Models.Furniture>
 
 @{
-    ViewBag.Title = "My Space";
+    ViewBag.Title = "Shopping List";
 }
 
 @*<h2>Index</h2>
@@ -57,114 +57,38 @@
         <div class="pull-to-refresh-arrow"></div>
     </div>
     <div class="list">
+        @foreach (var item in Model) {
         <div class="card color-default">
             <div class="row no-gutter">
                 <div class="col-50">
                     <div style="" class="card-header color-white no-border no-padding">
-                        <img class="card-cover" src="img/fur1.jpeg" alt="">
+                        <img class="card-cover" src="@Html.DisplayFor(modelItem => item.Img)" alt="">
                     </div>
                 </div>
                 <div class="col-50">
                     <div class="card-content-inner">
-                        <h3>Europian Sofa</h3>
-                        <h4 class="color-gray">price: $20</h4>
+                        <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+                        <h4 class="color-gray">price: @Html.DisplayFor(modelItem => item.Price)</h4>
                     </div>
                     <div class="row no-gutter">
                         <div class="col-50">
                             <div class="content-padded">
-                                <p><a class="button button-big button-fill external" href="#" data-transition="fade">Buy</a></p>
+                                <p><a class="button button-big button-fill external" href="@Html.DisplayFor(modelItem => item.PurchaseUrl)" data-transition="fade">Buy</a></p>
                             </div>
                         </div>
                         <div class="col-50">
                             <div class="content-padded">
                                 <p><a class="button button-big button-fill external" href="#" data-transition="fade">Delete</a></p>
+                                @*@Html.Action("Delete", "Furnitures", new { id = item.Id })*@
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card color-default">
-            <div class="row no-gutter">
-                <div class="col-50">
-                    <div style="" class="card-header color-white no-border no-padding">
-                        <img class="card-cover" src="img/fur1.jpeg" alt="">
-                    </div>
-                </div>
-                <div class="col-50">
-                    <div class="card-content-inner">
-                        <h3>Europian Sofa</h3>
-                        <h4 class="color-gray">price: $20</h4>
-                    </div>
-                    <div class="row no-gutter">
-                        <div class="col-50">
-                            <div class="content-padded">
-                                <p><a class="button button-big button-fill external" href="#" data-transition="fade">Buy</a></p>
-                            </div>
-                        </div>
-                        <div class="col-50">
-                            <div class="content-padded">
-                                <p><a class="button button-big button-fill external" href="#" data-transition="fade">Delete</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card color-default">
-            <div class="row no-gutter">
-                <div class="col-50">
-                    <div style="" class="card-header color-white no-border no-padding">
-                        <img class="card-cover" src="img/fur1.jpeg" alt="">
-                    </div>
-                </div>
-                <div class="col-50">
-                    <div class="card-content-inner">
-                        <h3>Europian Sofa</h3>
-                        <h4 class="color-gray">price: $20</h4>
-                    </div>
-                    <div class="row no-gutter">
-                        <div class="col-50">
-                            <div class="content-padded">
-                                <p><a class="button button-big button-fill external" href="#" data-transition="fade">Buy</a></p>
-                            </div>
-                        </div>
-                        <div class="col-50">
-                            <div class="content-padded">
-                                <p><a class="button button-big button-fill external" href="#" data-transition="fade">Delete</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card color-default">
-            <div class="row no-gutter">
-                <div class="col-50">
-                    <div style="" class="card-header color-white no-border no-padding">
-                        <img class="card-cover" src="img/fur1.jpeg" alt="">
-                    </div>
-                </div>
-                <div class="col-50">
-                    <div class="card-content-inner">
-                        <h3>Europian Sofa</h3>
-                        <h4 class="color-gray">price: $20</h4>
-                    </div>
-                    <div class="row no-gutter">
-                        <div class="col-50">
-                            <div class="content-padded">
-                                <p><a class="button button-big button-fill external" href="#" data-transition="fade">Buy</a></p>
-                            </div>
-                        </div>
-                        <div class="col-50">
-                            <div class="content-padded">
-                                <p><a class="button button-big button-fill external" href="#" data-transition="fade">Delete</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        }
+
+
 
     </div>
     <div class="infinite-scroll-preloader">

@@ -17,8 +17,8 @@ namespace FurNature.Controllers
         // GET: Furnitures
         public ActionResult Index()
         {
-            //return View(db.Furnitures.ToList());
-            return View();
+            return View(db.Furnitures.ToList());
+            //return View();
         }
 
         // GET: Furnitures/Details/5

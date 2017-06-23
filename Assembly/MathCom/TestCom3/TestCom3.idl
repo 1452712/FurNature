@@ -1,0 +1,38 @@
+// TestCom3.idl : TestCom3的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(TestCom3.tlb)和封送处理代码。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(E5AC5C50-B6FB-479C-8251-4E420E511099),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IFirstObject : IDispatch{
+	[id(1)] HRESULT Test(BSTR bstr);
+};
+[
+	uuid(08624583-AC79-4C01-88BE-B8CFEDBFCA53),
+	version(1.0),
+]
+
+//{877D726A-5456-4171-9CDB-0DAB3AFFE07F}
+
+library TestCom3Lib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(F31B5110-595E-44A9-8DEC-53F448ACCD1C)		
+	]
+	coclass FirstObject
+	{
+		[default] interface IFirstObject;
+	};
+};
+

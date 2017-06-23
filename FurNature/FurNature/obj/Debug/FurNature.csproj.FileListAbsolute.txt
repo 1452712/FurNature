@@ -107,4 +107,3 @@ E:\study\homework\dotNET\final\FurNature\FurNature\FurNature\bin\zh-Hans\Microso
 E:\study\homework\dotNET\final\FurNature\FurNature\FurNature\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 E:\study\homework\dotNET\final\FurNature\FurNature\FurNature\obj\Debug\FurNature.dll
 E:\study\homework\dotNET\final\FurNature\FurNature\FurNature\obj\Debug\FurNature.pdb
-E:\study\homework\dotNET\final\FurNature\FurNature\FurNature\obj\Debug\FurNature.csprojResolveAssemblyReference.cache

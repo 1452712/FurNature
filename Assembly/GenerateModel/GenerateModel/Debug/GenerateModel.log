@@ -1,0 +1,140 @@
+﻿  GenerateModel.cpp
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(121): warning C4305: “return”: 从“int”到“bool”截断
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(161): warning C4018: “<”: 有符号/无符号不匹配
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(113): warning C4101: “temp_dst”: 未引用的局部变量
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(215): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(216): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(219): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(220): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(223): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(224): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(227): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(228): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(261): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(262): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(265): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(266): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(269): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(270): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(273): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(274): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(284): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(285): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(288): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(289): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(292): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(293): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(296): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(297): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(335): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(336): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(338): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(339): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(341): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(342): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(344): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(345): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(355): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(356): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(359): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(360): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(366): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(367): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(370): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(371): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(374): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(375): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(378): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(379): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(406): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(407): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(411): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(412): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(416): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(417): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(421): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(422): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(429): warning C4018: “<”: 有符号/无符号不匹配
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(434): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(435): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(450): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(451): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(453): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(454): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(456): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(457): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(459): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(460): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(468): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(469): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(470): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(494): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(495): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(496): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(497): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(508): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(509): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(510): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(511): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(519): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(520): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(521): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(522): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(548): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(549): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(551): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(552): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(554): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(555): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(557): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(558): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(565): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(566): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(567): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(568): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(594): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(595): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(597): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(598): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(600): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(601): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(603): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(604): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(612): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(613): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(614): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(640): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(641): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(643): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(644): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(646): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(647): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(649): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(650): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(658): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(659): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(660): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(692): warning C4018: “<”: 有符号/无符号不匹配
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(693): warning C4018: “<”: 有符号/无符号不匹配
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(699): warning C4018: “<”: 有符号/无符号不匹配
+e:\study\homework\dotnet\final\furnature\assembly\generatemodel\generatemodel\generatemodel.cpp(710): warning C4018: “<”: 有符号/无符号不匹配
+    正在创建库 E:\study\homework\dotNET\final\FurNature\Assembly\GenerateModel\Debug\GenerateModel.lib 和对象 E:\study\homework\dotNET\final\FurNature\Assembly\GenerateModel\Debug\GenerateModel.exp
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvCreateImage，该符号在函数 "bool __cdecl dividephoto(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?dividephoto@@YA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvSetImageROI，该符号在函数 "bool __cdecl dividephoto(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?dividephoto@@YA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvResetImageROI，该符号在函数 "bool __cdecl dividephoto(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?dividephoto@@YA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvCreateMat，该符号在函数 "bool __cdecl dividephoto(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?dividephoto@@YA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvGetSize，该符号在函数 _handleImage@24 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvCopy，该符号在函数 "bool __cdecl dividephoto(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?dividephoto@@YA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvCreateMemStorage，该符号在函数 _handleImage@24 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvGetSeqElem，该符号在函数 _handleImage@24 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvCircle，该符号在函数 "bool __cdecl dividephoto(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?dividephoto@@YA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvCvtColor，该符号在函数 _handleImage@24 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvResize，该符号在函数 _handleImage@24 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvWarpPerspective，该符号在函数 "bool __cdecl dividephoto(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?dividephoto@@YA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvGetPerspectiveTransform，该符号在函数 "bool __cdecl dividephoto(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?dividephoto@@YA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvCanny，该符号在函数 _handleImage@24 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvHoughLines2，该符号在函数 _handleImage@24 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvShowImage，该符号在函数 "bool __cdecl dividephoto(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?dividephoto@@YA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvLoadImage，该符号在函数 _handleImage@24 中被引用
+GenerateModel.obj : error LNK2019: 无法解析的外部符号 _cvSaveImage，该符号在函数 "bool __cdecl dividephoto(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?dividephoto@@YA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用
+E:\study\homework\dotNET\final\FurNature\Assembly\GenerateModel\Debug\GenerateModel.dll : fatal error LNK1120: 18 个无法解析的外部命令

@@ -53,6 +53,7 @@ namespace FurNature.Controllers
         }
 
         // GET: Account
+        [ValidateAntiForgeryToken]
         public ActionResult Index()
         {
             return View();
@@ -93,7 +94,7 @@ namespace FurNature.Controllers
                     return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "登录失败。");
+                    ModelState.AddModelError("", "Login failed.");
                     return View(model);
             }
         }
@@ -136,7 +137,7 @@ namespace FurNature.Controllers
                     return View("Lockout");
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "代码无效。");
+                    ModelState.AddModelError("", "Invalid code.");
                     return View(model);
             }
         }

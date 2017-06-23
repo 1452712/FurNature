@@ -1,0 +1,5 @@
+﻿  Add.cpp
+e:\study\homework\dotnet\final\furnature\assembly\add\add\add.cpp(19): warning C4190: “StringAdd”有指定的 C 链接，但返回了与 C 不兼容的 UDT“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+  Add.vcxproj -> E:\study\homework\dotNET\final\FurNature\Assembly\Add\x64\Debug\Add.dll
+  Add.vcxproj -> E:\study\homework\dotNET\final\FurNature\Assembly\Add\x64\Debug\Add.pdb (Full PDB)

@@ -1,0 +1,114 @@
+﻿@model IEnumerable<FurNature.Models.Furniture>
+
+@{
+    ViewBag.Title = "Shopping List";
+}
+
+@*<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.path)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.path)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>*@
+
+<header class="bar bar-nav">
+    <a class="button button-link button-nav pull-left back" href="/Home/Index">
+        <span class="icon icon-left"></span>
+        Back
+    </a>
+    <h1 class="title">ShoppingList</h1>
+</header>
+<div class="content pull-to-refresh-content infinite-scroll">
+    <style>
+        .card-header {
+            height: 10rem;
+            overflow: hidden;
+        }
+    </style>
+    <div class="pull-to-refresh-layer">
+        <div class="preloader"></div>
+        <div class="pull-to-refresh-arrow"></div>
+    </div>
+    <div class="list">
+        @foreach (var item in Model) {
+        <div class="card color-default">
+            <div class="row no-gutter">
+                <div class="col-50">
+                    <div style="" class="card-header color-white no-border no-padding">
+                        <img class="card-cover" src="@Html.DisplayFor(modelItem => item.Img)" alt="">
+                    </div>
+                </div>
+                <div class="col-50">
+                    <div class="card-content-inner">
+                        <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+                        <h4 class="color-gray">price: @Html.DisplayFor(modelItem => item.Price)</h4>
+                    </div>
+                    <div class="row no-gutter">
+                        <div class="col-50">
+                            <div class="content-padded">
+                                <p><a class="button button-big button-fill external" href="@Html.DisplayFor(modelItem => item.Purchase_url)" data-transition="fade">Buy</a></p>
+                            </div>
+                        </div>
+                        <div class="col-50">
+                            <div class="content-padded">
+                                <p><a class="button button-big button-fill external" href="/Furnitures/Delete/@Html.DisplayFor(modelItem => item.Id)" data-transition="fade">Delete</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+
+
+
+    </div>
+    <div class="infinite-scroll-preloader">
+        <div class="preloader"></div>
+    </div>
+    <div style="display:none" id="index-tpl">
+        <a href="detail.html">
+            <div class="card color-default">
+                <div style="" valign="bottom" class="card-header color-white no-border no-padding">
+                    <img class="card-cover" src="//gd4.alicdn.com/bao/uploaded/i4/TB13mgfHpXXXXcVXFXXXXXXXXXX_!!2-item_pic.png_640x640.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <div class="card-content-inner">
+                        <p>My Pillow Classic Series Bed Pillows</p>
+                        <p class="color-gray">@DateTime.Now.Year</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="link">like(20)</span>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

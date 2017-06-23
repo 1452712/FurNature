@@ -225,6 +225,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Add.dll" />
     <Content Include="Content\app.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -719,6 +720,12 @@
     <Content Include="Image\example.png" />
     <Content Include="Image\faces.PNG" />
     <Content Include="Image\favicon.ico" />
+    <Content Include="Image\Furnitures\bed\3.JPG" />
+    <Content Include="Image\Furnitures\bed\4.JPG" />
+    <Content Include="Image\Furnitures\bed\5.JPG" />
+    <Content Include="Image\Furnitures\sofa\1.jpg" />
+    <Content Include="Image\Furnitures\sofa\2.jpg" />
+    <Content Include="Image\Furnitures\table\6.JPG" />
     <Content Include="Image\hback.jpg" />
     <Content Include="Image\hbottom.jpg" />
     <Content Include="Image\hleft.jpg" />
@@ -1220,6 +1227,8 @@
     <Content Include="Scripts\libs\zlib_and_gzip.min.js.map" />
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Photos\CreatePhoto.cshtml" />
+    <Content Include="Views\Furnitures\Create.cshtml" />
+    <Content Include="Views\Furnitures\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

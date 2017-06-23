@@ -1,0 +1,138 @@
+.page-login .signup {
+  font-size: 0.7rem;
+}
+.page-login .leader {
+  margin: 3rem 0 1rem 0;
+  padding: 0.5rem 0;
+  font-size: 0.7rem;
+  border-top: 1px dashed #ccc;
+  color: #999;
+}
+.page-login .leader:after {
+  left: auto;
+  right: 1rem;
+}
+
+.page-login .others {
+  text-align: center;
+}
+
+.page-login i.icon-form-name {
+  background: url(http://gtms01.alicdn.com/tps/i1/TB1pN89IFXXXXaPXpXX8wnlGFXX-42-46.png) no-repeat;
+  background-size: 21px 23px;
+  background-position: 5px 7px;
+}
+.page-login i.icon-form-email {
+  background: url(http://gtms04.alicdn.com/tps/i4/TB1An8TIFXXXXapXVXXlg00GFXX-38-46.png) no-repeat;
+  background-size: 19px 23px;
+  background-position: 6px 1px;
+}
+
+.page-space .swiper-container {
+  height: 10rem;
+}
+.page-space .swiper-slide img {
+  width: 100%;
+}
+
+
+.page-detail .swiper-container {
+  height: 10rem;
+}
+.page-detail .swiper-slide img {
+  width: 100%;
+}
+
+.page-detail .goods-card {
+}
+.page-detail .goods-card h3 {
+  font-size: 0.8rem;
+}
+.page-detail .goods-card del {
+  font-size: 0.6rem;
+  color: gray;
+}
+.page-detail .goods-card .row {
+  font-size: 0.7rem;
+}
+
+.page-me .person-card {
+  margin: .6rem 0;
+}
+.page-me .row {
+  border: 1px solid #ccc;
+  background: white;
+  border-left: 0;
+  border-right: 0;
+}
+.page-me .row h4 {
+  margin: 0.3rem 0;
+}
+.page-me .row .color-gray {
+  margin: 0.3rem 0;
+  font-size: 0.7rem;
+}
+
+.page-me .col-25 + .col-25 {
+  border-left: 1px solid #ccc;
+}
+
+.page-me .person-card img {
+  border-radius: 100%;
+}
+
+.page-me .person-card ul{
+  background: transparent;
+}
+.page-me .person-card .item-text {
+  height: auto;
+}
+.page-me .person-card ul:before,
+.page-settings .person-card ul:after {
+  display: none;
+}
+.page-me .list .icon {
+  font-size: 1rem;
+}
+label.cameraButton {
+  width: 60%;
+  display: inline-block;
+  margin: 1em 0;
+
+  /* Styles to make it look like a button */
+  padding: 0.5em;
+  border: 2px solid #666;
+  border-color: #EEE #CCC #CCC #EEE;
+  background-color: #DDD;
+}
+
+/* Look like a clicked/depressed button */
+label.cameraButton:active {
+  border-color: #CCC #EEE #EEE #CCC;
+}
+
+/* This is the part that actually hides the 'Choose file' text box for camera inputs */
+label.cameraButton input[accept*="camera"] {
+  display: none;
+}
+
+#onDevice {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  padding: 12px 18px;
+  font-size: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+#submit {
+  color: #fff;
+  background: #0894ec;
+  border: none;
+  -webkit-appearance: none;
+}
+
