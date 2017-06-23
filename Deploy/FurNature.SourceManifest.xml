@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <appHostConfig path="WebSite1" />
+  <contentPath path="E:\study\homework\dotNET\final\FurNature\FurNature\FurNature\obj\Release\Package\PackageTmp" />
+</sitemanifest>

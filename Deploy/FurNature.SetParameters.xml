@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="localhost:2494" />
+  <setParameter name="IIS Web Application Pool Name" value="DefaultAppPool" />
+  <setParameter name="IisVirtualDirectoryPhysicalPath" value="E:\study\homework\dotNET\final\FurNature\FurNature\FurNature_deploy" />
+  <setParameter name="DefaultConnection-Web.config Connection String" value="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\study\homework\dotNET\final\FurNature\FurNature\FurNature\App_Data\aspnet-FurNature-20170616020525.mdf;Integrated Security=True;Connect Timeout=30" />
+</parameters>

@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+	font-family: "方正小标宋简体";
+	src: url(../fonts/4114_方正小标宋_GBK.ttf) format('truetype');
+}
+@font-face {
+	font-family: "微软雅黑";
+	src: url(../fonts/msyh.ttf) format('truetype');
+}
+body{
+	background: #fff;
+	font-size: 100%;
+	font-family: "微软雅黑";
+	width: 100%;
+}
+body a{
+	color: #FFFFFF;
+	display: inline-block;
+	font-weight: bold;
+	margin-left: 30px;
+}
+p{
+	margin-bottom: 10px;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 10px;
+	color: #000000;
+	font-size: 15px;
+	text-align: center;	
+}
+.header{
+	background-color: #fec707;
+	line-height: 50px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+}
+.top_nav{
+	background-color: #000000;
+	height: 25px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+.top_nav ul{
+	list-style:none
+}
+.top_nav ul li{
+	float: left;
+	color: #CCCCCC;
+	font-size: 15px;
+	padding-left: 10px;
+	padding-right: 30px;
+}
+.blogContainer{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.blogSider{
+	width: 100%;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #fec707;
+}
+.blogContent{
+	width: 75%;
+    overflow: scroll;
+}
+.picure{
+	width: 120px;
+	height: 120px;
+	border-radius: 60px;
+	background-image: url(../images/me.jpg);
+	background-size: 100% 100%;
+}
+.name{
+	color: #FFF;
+	font-size: 18px;
+	font-weight: bold;
+	padding-top: 10px;
+}
+.intro{
+	color: #000;
+	font-size: 13px;
+	padding-top: 10px;
+}
+.article{
+	width: 86%;
+	height: 500px;
+	margin-left: 7%;
+	margin-right: 7%;
+}
+.title{
+	color: #000;
+	font-size: 25px;
+	font-weight: bold;
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+.bigimg{
+	padding-top: 10px;
+	max-width: 100%;
+	height: auto;
+	padding-bottom: 10px;
+}
+
+/* 浏览器宽度小于900px时*/
+@media screen and (max-width: 900px) {
+
+.blogContainer{
+    flex-direction: column;
+}
+.blogSider{
+    width: 100%;
+	height: 250px;
+}
+.blogContent{
+	width: 100%;
+	overflow:visible;
+}
+}

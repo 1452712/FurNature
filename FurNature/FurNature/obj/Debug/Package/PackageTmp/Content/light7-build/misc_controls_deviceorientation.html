@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - controls - deviceorientation</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1">
+		<style>
+			body {
+				margin: 0px;
+				background-color: #000000;
+				overflow: hidden;
+			}
+
+			#info {
+				position: absolute;
+				top: 0px; width: 100%;
+				color: #ffffff;
+				padding: 5px;
+				font-family:Monospace;
+				font-size:13px;
+				font-weight: bold;
+				text-align:center;
+			}
+
+			a {
+				color: #ff8800;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="container"></div>
+
+		<div id="info">
+			<a href="http://threejs.org" target="_blank">three.js</a> - equirectangular panorama demo with DeviceOrientation controls.
+			photo by <a href="http://www.flickr.com/photos/jonragnarsson/2294472375/" target="_blank">Jón Ragnarsson</a>.
+		</div>
+
+		<script src="build/three.js"></script>
+		<script src="js/renderers/CSS3DRenderer.js"></script>
+		<script src="js/controls/DeviceOrientationControls.js"></script>
+
+		<script>
+			(function() {
+				  "use strict";
+
+				  window.addEventListener('load', function() {
+
+					  var container, camera, scene, renderer, geometry, mesh;
+                      var controls = void 0;
+                      var target = new THREE.Vector3();
+                      var lon = 90, lat = 0;
+                      var phi = 0, theta = 0;
+
+                      var touchX, touchY;
+
+						var animate = function(){
+
+							window.requestAnimationFrame( animate );
+
+                            lat = Math.max( - 85, Math.min( 85, lat ) );
+                            lon = Math.max(-180, Math.min(180, lon));//限制固定角度内旋转
+                            phi = THREE.Math.degToRad( 90 - lat );
+                            theta = THREE.Math.degToRad( lon );
+
+                            target.x = Math.sin( phi ) * Math.cos( theta );
+                            target.y = Math.cos( phi );
+                            target.z = Math.sin( phi ) * Math.sin( theta )+300;
+
+                            camera.lookAt( target );
+
+                            controls.update();
+							renderer.render(scene, camera);
+
+						};
+
+						container = document.getElementById( 'container' );
+
+						camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 1100);
+
+
+						controls = new THREE.DeviceOrientationControls( camera );
+
+						scene = new THREE.Scene();
+
+                      var mwidth,mheight;
+
+                      var hback = document.createElement('img');
+                      hback.src = 'img/hback.jpg';
+                      hback.onload = function() {
+                          var height=hback.height;
+                          var width=hback.width;
+                          mwidth=width;
+                          mheight=height;
+                          var canvas = document.createElement('canvas');
+                          canvas.width = width;
+                          canvas.height = height;
+
+                          var side = {
+                              position: [ 0, 0, 300 ],
+                              rotation: [ 0, Math.PI , 0 ]
+                          };
+
+
+                          canvas.width = width;
+                          //canvas.height = points[5]-points[1];
+                          var cxt = canvas.getContext("2d");
+                          cxt.drawImage(hback,0,0);
+                          var element = document.createElement( 'img' );
+                          element.width = width;
+                          //element.height = points[5]-points[1]+2;
+                          document.getElementsByTagName('body')[0].appendChild(canvas);
+                          var _img_url = canvas.toDataURL("image/png"); // ��ȡͼƬλ��
+                          element.src = _img_url;
+                          var object = new THREE.CSS3DObject( element ); // �������sides��ͼƬ�����������Ͻ�����Ⱦ
+                          object.position.fromArray( side.position );
+                          object.rotation.fromArray( side.rotation );
+                          scene.add( object );
+                      }
+
+                      var hleft = document.createElement('img');
+                      hleft.src = 'img/hleft.jpg';
+                      hleft.onload = function() {
+                          var height=hleft.height;
+                          var width=hleft.width;
+                          var canvas = document.createElement('canvas');
+                          canvas.width = width;
+                          canvas.height = height;
+
+                          var side = {
+                              position: [ mwidth/2, 0, 300-width/2 ],
+                              rotation: [ 0, -Math.PI/2 , 0 ]
+                          };
+
+
+                          canvas.width = width;
+                          //canvas.height = points[5]-points[1];
+                          var cxt = canvas.getContext("2d");
+                          cxt.drawImage(hleft,0,0);
+                          var element = document.createElement( 'img' );
+                          element.width = width;
+                          //element.height = points[5]-points[1]+2;
+                          document.getElementsByTagName('body')[0].appendChild(canvas);
+                          var _img_url = canvas.toDataURL("image/png"); // ��ȡͼƬλ��
+                          element.src = _img_url;
+                          var object = new THREE.CSS3DObject( element ); // �������sides��ͼƬ�����������Ͻ�����Ⱦ
+                          object.position.fromArray( side.position );
+                          object.rotation.fromArray( side.rotation );
+                          scene.add( object );
+                      }
+
+                      var htop = document.createElement('img');
+                      htop.src = 'img/htop.jpg';
+                      htop.onload = function() {
+                          var height=htop.height;
+                          var width=htop.width;
+                          var canvas = document.createElement('canvas');
+                          canvas.width = width;
+                          canvas.height = height;
+
+                          var side = {
+                              position: [ 0, mheight/2, 300-height/2 ],
+                              rotation: [ Math.PI/2, 0 , Math.PI ]
+                          };
+
+
+                          canvas.width = width;
+                          //canvas.height = points[5]-points[1];
+                          var cxt = canvas.getContext("2d");
+                          cxt.drawImage(htop,0,0);
+                          var element = document.createElement( 'img' );
+                          element.width = width;
+                          //element.height = points[5]-points[1]+2;
+                          document.getElementsByTagName('body')[0].appendChild(canvas);
+                          var _img_url = canvas.toDataURL("image/png"); // ��ȡͼƬλ��
+                          element.src = _img_url;
+                          var object = new THREE.CSS3DObject( element ); // �������sides��ͼƬ�����������Ͻ�����Ⱦ
+                          object.position.fromArray( side.position );
+                          object.rotation.fromArray( side.rotation );
+                          scene.add( object );
+                      }
+
+                      var hright = document.createElement('img');
+                      hright.src = 'img/hright.jpg';
+                      hright.onload = function() {
+                          var height=hright.height;
+                          var width=hright.width;
+                          var canvas = document.createElement('canvas');
+                          canvas.width = width;
+                          canvas.height = height;
+
+                          var side = {
+                              position: [ -mwidth/2, 0, 300-width/2 ],
+                              rotation: [ 0, Math.PI/2 , 0 ]
+                          };
+
+
+                          canvas.width = width;
+                          //canvas.height = points[5]-points[1];
+                          var cxt = canvas.getContext("2d");
+                          cxt.drawImage(hright,0,0);
+                          var element = document.createElement( 'img' );
+                          element.width = width;
+                          //element.height = points[5]-points[1]+2;
+                          document.getElementsByTagName('body')[0].appendChild(canvas);
+                          var _img_url = canvas.toDataURL("image/png"); // ��ȡͼƬλ��
+                          element.src = _img_url;
+                          var object = new THREE.CSS3DObject( element ); // �������sides��ͼƬ�����������Ͻ�����Ⱦ
+                          object.position.fromArray( side.position );
+                          object.rotation.fromArray( side.rotation );
+                          scene.add( object );
+                      }
+
+                      var hbottom = document.createElement('img');
+                      hbottom.src = 'img/hbottom.jpg';
+                      hbottom.onload = function() {
+                          var height=hbottom.height;
+                          var width=hbottom.width;
+                          var canvas = document.createElement('canvas');
+                          canvas.width = width;
+                          canvas.height = height;
+
+                          var side = {
+                              position: [ 0, -mheight/2, 300-height/2 ],
+                              rotation: [ -Math.PI/2, 0 , Math.PI ]
+                          };
+
+
+                          canvas.width = width;
+                          //canvas.height = points[5]-points[1];
+                          var cxt = canvas.getContext("2d");
+                          cxt.drawImage(hbottom,0,0);
+                          var element = document.createElement( 'img' );
+                          element.width = width;
+                          //element.height = points[5]-points[1]+2;
+                          document.getElementsByTagName('body')[0].appendChild(canvas);
+                          var _img_url = canvas.toDataURL("image/png"); // ��ȡͼƬλ��
+                          element.src = _img_url;
+                          var object = new THREE.CSS3DObject( element ); // �������sides��ͼƬ�����������Ͻ�����Ⱦ
+                          object.position.fromArray( side.position );
+                          object.rotation.fromArray( side.rotation );
+                          scene.add( object );
+                      }
+                      renderer = new THREE.CSS3DRenderer();
+
+
+//						renderer = new THREE.WebGLRenderer();
+						renderer.setSize(window.innerWidth, window.innerHeight);
+//						renderer.domElement.style.position = 'absolute';
+//						renderer.domElement.style.top = 0;
+                      document.body.appendChild( renderer.domElement );
+//						container.appendChild(renderer.domElement);
+                      document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+                      document.addEventListener( 'mousewheel', onDocumentMouseWheel, false );
+
+                      document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+                      document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+
+						window.addEventListener('resize', function() {
+
+							camera.aspect = window.innerWidth / window.innerHeight;
+							camera.updateProjectionMatrix();
+							renderer.setSize( window.innerWidth, window.innerHeight );
+
+						}, false);
+
+						animate();
+
+				  }, false);
+
+			})();
+            function onDocumentMouseDown( event ) {
+
+                event.preventDefault();
+
+                document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+                document.addEventListener( 'mouseup', onDocumentMouseUp, false );
+
+            }
+
+            function onDocumentMouseMove( event ) {
+
+                var movementX = event.movementX || event.mozMovementX || event.webkitMovementX || 0;
+                var movementY = event.movementY || event.mozMovementY || event.webkitMovementY || 0;
+
+                lon -= movementX * 0.1;
+                lat += movementY * 0.1;
+
+            }
+
+            function onDocumentMouseUp( event ) {
+
+                document.removeEventListener( 'mousemove', onDocumentMouseMove );
+                document.removeEventListener( 'mouseup', onDocumentMouseUp );
+
+            }
+
+            function onDocumentMouseWheel( event ) {
+
+                camera.fov -= event.wheelDeltaY * 0.05;
+                camera.updateProjectionMatrix();
+
+            }
+
+            function onDocumentTouchStart( event ) {
+
+                event.preventDefault();
+
+                var touch = event.touches[ 0 ];
+
+                touchX = touch.screenX;
+                touchY = touch.screenY;
+
+            }
+
+            function onDocumentTouchMove( event ) {
+
+                event.preventDefault();
+
+                var touch = event.touches[ 0 ];
+
+                lon -= ( touch.screenX - touchX ) * 0.1;
+                lat += ( touch.screenY - touchY ) * 0.1;
+
+                touchX = touch.screenX;
+                touchY = touch.screenY;
+
+            }
+		</script>
+
+	</body>
+</html>

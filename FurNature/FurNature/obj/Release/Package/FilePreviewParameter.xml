@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="FurNature" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="AppHostConfig" match="^WebSite1$" />
+    <parameterEntry kind="ProviderPath" scope="contentPath" match="^E:\\study\\homework\\dotNET\\final\\FurNature\\FurNature\\FurNature\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^E:\\study\\homework\\dotNET\\final\\FurNature\\FurNature\\FurNature\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="IIS Web Application Pool Name" description="" value="DefaultAppPool" tags="">
+    <parameterEntry kind="DeploymentObjectAttribute" scope="application" match="application[@applicationPool='DefaultAppPool']/@applicationPool" />
+  </parameter>
+  <parameter name="IisVirtualDirectoryPhysicalPath" description="" value="E:\study\homework\dotNET\final\FurNature\FurNature\FurNature_deploy" tags="PhysicalPath">
+    <parameterEntry kind="DestinationVirtualDirectory" scope=".*" match="^E:\\study\\homework\\dotNET\\final\\FurNature\\FurNature\\FurNature$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\study\homework\dotNET\final\FurNature\FurNature\FurNature\App_Data\aspnet-FurNature-20170616020525.mdf;Integrated Security=True;Connect Timeout=30" tags="">
+    <parameterEntry kind="XmlFile" scope="E:\\study\\homework\\dotNET\\final\\FurNature\\FurNature\\FurNature\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>
